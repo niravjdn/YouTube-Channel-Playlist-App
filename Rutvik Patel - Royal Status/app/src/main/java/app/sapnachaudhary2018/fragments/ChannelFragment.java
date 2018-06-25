@@ -1,7 +1,9 @@
 package app.sapnachaudhary2018.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -34,8 +35,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 import app.sapnachaudhary2018.Config;
 import app.sapnachaudhary2018.DetailsActivity;
@@ -54,16 +57,22 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
 
     private static String GOOGLE_YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY;//here you should use your api key for testing purpose you can use this api also
     private  String CHANNEL_ID = "UCOhHO2ICt0ti9KAh-QHvttQ";//here you should use your playlist id for testing purpose you can use this api also
-    private  String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&channelId=" + CHANNEL_ID + "&maxResults=150&key=" + GOOGLE_YOUTUBE_API_KEY + "";
+    private  String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&channelId=" + CHANNEL_ID + "&maxResults=30&key=" + GOOGLE_YOUTUBE_API_KEY + "";
 
 
 
     private InterstitialAd interstitial;
+    private String nextPageToken="";
+    private boolean isFirstLoad = true;
+    private boolean isLoading = false;
     private YoutubeDataModel youtubeDataModel;
     private RecyclerView mList_videos = null;
     private VideoPostAdapter adapter = null;
     private ArrayList<YoutubeDataModel> mListData = new ArrayList<>();
     private ProgressBar pb;
+    private SharedPreferences sharedpreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final int MAX_CLICLK = 5;
     public ChannelFragment() {
         // Required empty public constructor
     }
@@ -85,13 +94,27 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
         mList_videos = (RecyclerView) view.findViewById(R.id.mList_videos);
         CHANNEL_ID = getArguments().getString("id");
 
-        CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&channelId=" + CHANNEL_ID + "&maxResults=50&key=" + GOOGLE_YOUTUBE_API_KEY + "";
+        CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&channelId=" + CHANNEL_ID + "&maxResults=30&key=" + GOOGLE_YOUTUBE_API_KEY + "";
         pb = (ProgressBar) view.findViewById(R.id.progressBar);
         ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(container.getContext(), R.dimen.item_offst);
         mList_videos.addItemDecoration(itemDecoration);
         mList_videos.setItemAnimator(new DefaultItemAnimator());
 
         setHasOptionsMenu(true);
+
+        mList_videos.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+
+                if (!recyclerView.canScrollVertically(1) && !isLoading) {
+                    Log.d("App: Calling","Calling RequestYoutubeAPI()"+adapter.getItemCount()+" - "+mListData.size());
+                    new RequestYoutubeAPI().execute();
+                }
+            }
+        });
+
+        sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
         initList(mListData);
         new RequestYoutubeAPI().execute();
@@ -131,11 +154,54 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
 
                 // Prepare an Interstitial Ad Listener
                 interstitial.setAdListener(new AdListener() {
+
                     public void onAdLoaded() {
                         Log.d("Adss","calling onLoaded displayInterstitial");
                         // Call displayInterstitial() function
                         pb.setVisibility(View.GONE);
-                        displayInterstitial();
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        //here check the counter for threshold value
+                        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                        Date date = new Date();
+                        String currentDate = formatter.format(date);
+
+                        if(!sharedpreferences.contains("date")){
+                            editor.putString("date", currentDate);
+                          //  Toast.makeText(getActivity(), "Setting date", Toast.LENGTH_LONG).show();
+                            editor.commit();
+                        }
+                        if(!sharedpreferences.contains("count")){
+                          //  Toast.makeText(getActivity(), "Setting count", Toast.LENGTH_LONG).show();
+                            editor.putInt("count",0);
+                            editor.commit();
+                        }
+
+                        //now sharedpreference contains both
+                        if(!sharedpreferences.getString("date","date").equals(currentDate)){
+                            //not equal to current date so set and set count as 0
+                            editor.putString("date",currentDate);
+                            editor.putInt("count",0);
+                            editor.commit();
+                            displayInterstitial();
+                        }else{
+                            //date is already present, check for counter
+                            if(sharedpreferences.getInt("count",0) == MAX_CLICLK ){
+                                //then directly pass to another activity
+                                try{
+                                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                                    intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);
+                                    startActivity(intent);
+                                }catch (Exception e){
+                                    Log.d("Adds", Arrays.toString(e.getStackTrace()));
+                                }
+                            }else{
+                                //increase count and show ad
+                                displayInterstitial();
+                            }
+                        }
+
+
+                        //show this if user has not reached threshold else don't show this
                     }
 
                     @Override
@@ -147,6 +213,17 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
                         intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);
                         startActivity(intent);
                     }
+
+                    @Override
+                    public void onAdLeftApplication() {
+                        int count = sharedpreferences.getInt("count",0);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putInt("count",++count);
+                        Log.d("Adds","Add Clicked "+count);
+                        // Toast.makeText(getActivity(), "Clicked "+count, Toast.LENGTH_LONG).show();
+                        editor.commit();
+                    }
+
 
                     @Override
                     public void onAdOpened() {
@@ -184,6 +261,7 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
     private class RequestYoutubeAPI extends AsyncTask<Void, String, String> {
         @Override
         protected void onPreExecute() {
+            isLoading = true;
             pb.setVisibility(View.VISIBLE);
             super.onPreExecute();
         }
@@ -192,8 +270,19 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
         protected String doInBackground(Void... params) {
             Log.d("App: async","ASYNC Task Called.");
             HttpClient httpClient = new DefaultHttpClient();
-            HttpGet httpGet = new HttpGet(CHANNLE_GET_URL);
-            Log.e("URL", CHANNLE_GET_URL);
+            HttpGet httpGet;
+            if(!nextPageToken.equals("")){
+                String appendString = "&pageToken="+nextPageToken;
+                httpGet = new HttpGet(CHANNLE_GET_URL+appendString);
+                Log.e("URL", CHANNLE_GET_URL+appendString);
+            }else if(isFirstLoad)
+            {
+                httpGet = new HttpGet(CHANNLE_GET_URL);
+                Log.e("URL", CHANNLE_GET_URL);
+            }else
+                return null;
+
+
             try {
                 HttpResponse response = httpClient.execute(httpGet);
                 HttpEntity httpEntity = response.getEntity();
@@ -209,18 +298,21 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
 
         @Override
         protected void onPostExecute(String response) {
-
             pb.setVisibility(View.GONE);
             if (response != null) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     Log.e("response", jsonObject.toString());
-                    mListData = parseVideoListFromResponse(jsonObject);
-                    initList(mListData);
+                    mListData.addAll(parseVideoListFromResponse(jsonObject));
+                    if(isFirstLoad){
+                        isFirstLoad = false;
+                        initList(mListData);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
+            isLoading = false;
         }
     }
 
@@ -229,6 +321,16 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
 
         if (jsonObject.has("items")) {
             try {
+                if(!jsonObject.has("nextPageToken")){
+                    //now it does not contain nextPageToken means it has prevPageToken - so it's last page
+                    nextPageToken = "";
+                    Log.d("App: prevPageToken ","Setting nextPageToken Blank");
+                }else{
+                    nextPageToken = jsonObject.getString("nextPageToken");
+                    Log.d("App: nextPageToken ",""+nextPageToken);
+                }
+
+
                 JSONArray jsonArray = jsonObject.getJSONArray("items");
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject json = jsonArray.getJSONObject(i);

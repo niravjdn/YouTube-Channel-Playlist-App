@@ -152,11 +152,11 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
 
                         if(!sharedpreferences.contains("date")){
                             editor.putString("date", currentDate);
-                            Toast.makeText(getActivity(), "Setting date", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getActivity(), "Setting date", Toast.LENGTH_LONG).show();
                             editor.commit();
                         }
                         if(!sharedpreferences.contains("count")){
-                            Toast.makeText(getActivity(), "Setting count", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getActivity(), "Setting count", Toast.LENGTH_LONG).show();
                             editor.putInt("count",0);
                             editor.commit();
                         }

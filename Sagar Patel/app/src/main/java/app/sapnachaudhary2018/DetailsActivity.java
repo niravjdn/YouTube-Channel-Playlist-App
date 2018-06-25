@@ -2,10 +2,8 @@ package app.sapnachaudhary2018;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -48,7 +46,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
-import app.sapnachaudhary2018.R;
 import app.sapnachaudhary2018.adapters.CommentAdapter;
 import app.sapnachaudhary2018.helper.DBHelper;
 import app.sapnachaudhary2018.models.YoutubeCommentModel;
@@ -80,10 +77,10 @@ public class DetailsActivity extends YouTubeBaseActivity implements
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         Log.d("App:","Configuration Changed");
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            mYoutubePlayer.setFullscreen(true);
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-           mYoutubePlayer.setFullscreen(false);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE && mYoutubePlayer!=null) {
+            mYoutubePlayer.setFullscreen(true); // add condition for &mYoutubePlayer!=null
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT && mYoutubePlayer!=null){
+            mYoutubePlayer.setFullscreen(false);
         }
     }
 
@@ -212,7 +209,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements
     @Override
     public void onBackPressed() {
         Log.d("Ap:","isFullScreen "+isFullScreen);
-        if (isFullScreen){
+        if (isFullScreen && mYoutubePlayer != null){
             mYoutubePlayer.pause();
             mYoutubePlayer.setFullscreen(false);
         }

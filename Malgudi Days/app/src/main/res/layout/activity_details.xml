@@ -16,7 +16,7 @@
     //height was 170dp
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_player"
-        android:layout_height="170dp"
+        android:layout_height="190dp"
         android:layout_width="match_parent" />
 
 
@@ -143,7 +143,7 @@
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="35dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="175dp"
         android:background="@android:color/transparent"
         android:onClick="play_btn_pressed"
         android:src="@drawable/play_button"

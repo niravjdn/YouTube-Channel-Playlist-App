@@ -3,6 +3,7 @@ package app.sapnachaudhary2018.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,7 +12,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -37,8 +37,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 import app.sapnachaudhary2018.Config;
 import app.sapnachaudhary2018.DetailsActivity;
@@ -79,6 +81,9 @@ public class FavouriteFragment extends Fragment implements
     private ArrayList<YoutubeDataModel> mListData = new ArrayList<>();
     private ProgressBar pb;
     private TextView tvFav;
+    private  SharedPreferences sharedpreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final int MAX_CLICLK = 5;
     public FavouriteFragment() {
         // Required empty public constructor
     }
@@ -120,6 +125,9 @@ public class FavouriteFragment extends Fragment implements
         mList_videos.setItemAnimator(new DefaultItemAnimator());
 
         setHasOptionsMenu(true);
+
+        sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
 
         initList(mListData);
 
@@ -164,7 +172,49 @@ public class FavouriteFragment extends Fragment implements
                         Log.d("Adss","calling onLoaded displayInterstitial");
                         // Call displayInterstitial() function
                         pb.setVisibility(View.GONE);
-                        displayInterstitial();
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        //here check the counter for threshold value
+                        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                        Date date = new Date();
+                        String currentDate = formatter.format(date);
+
+                        if(!sharedpreferences.contains("date")){
+                            editor.putString("date", currentDate);
+                           // Toast.makeText(getActivity(), "Setting date", Toast.LENGTH_LONG).show();
+                            editor.commit();
+                        }
+                        if(!sharedpreferences.contains("count")){
+                         //   Toast.makeText(getActivity(), "Setting count", Toast.LENGTH_LONG).show();
+                            editor.putInt("count",0);
+                            editor.commit();
+                        }
+
+                        //now sharedpreference contains both
+                        if(!sharedpreferences.getString("date","date").equals(currentDate)){
+                            //not equal to current date so set and set count as 0
+                            editor.putString("date",currentDate);
+                            editor.putInt("count",0);
+                            editor.commit();
+                            displayInterstitial();
+                        }else{
+                            //date is already present, check for counter
+                            if(sharedpreferences.getInt("count",0) == MAX_CLICLK ){
+                                //then directly pass to another activity
+                                try{
+                                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                                    intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);
+                                    startActivity(intent);
+                                }catch (Exception e){
+                                    Log.d("Adds", Arrays.toString(e.getStackTrace()));
+                                }
+                            }else{
+                                //increase count and show ad
+                                displayInterstitial();
+                            }
+                        }
+
+
+                        //show this if user has not reached threshold else don't show this
                     }
 
                     @Override
@@ -178,6 +228,16 @@ public class FavouriteFragment extends Fragment implements
                     }
 
                     @Override
+                    public void onAdLeftApplication() {
+                        int count = sharedpreferences.getInt("count",0);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putInt("count",++count);
+                        Log.d("Adds","Add Clicked "+count);
+                        // Toast.makeText(getActivity(), "Clicked "+count, Toast.LENGTH_LONG).show();
+                        editor.commit();
+                    }
+
+                    @Override
                     public void onAdOpened() {
                         Log.d("Adds","Add Opened");
                     }
@@ -185,7 +245,7 @@ public class FavouriteFragment extends Fragment implements
                     @Override
                     public void onAdClosed() {
                         // Load the next interstitial. we don't need this as we are building new request each time
-                       // interstitial.loadAd(new AdRequest.Builder().build());
+                        // interstitial.loadAd(new AdRequest.Builder().build());
                         Log.d("Adds","Ad closed, open details activity");
                         //open activity once ad is seen by user
                         try{
@@ -197,7 +257,6 @@ public class FavouriteFragment extends Fragment implements
                         }
                     }
                 });
-
                 /*YoutubeDataModel youtubeDataModel = item;
                 Intent intent = new Intent(getActivity(), DetailsActivity.class);
                 intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);

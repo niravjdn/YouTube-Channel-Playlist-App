@@ -1,7 +1,9 @@
 package app.sapnachaudhary2018.fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,8 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
-
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -35,8 +35,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 import app.sapnachaudhary2018.Config;
 import app.sapnachaudhary2018.DetailsActivity;
@@ -68,6 +70,9 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
     private VideoPostAdapter adapter = null;
     private ArrayList<YoutubeDataModel> mListData = new ArrayList<>();
     private ProgressBar pb;
+    private SharedPreferences sharedpreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final int MAX_CLICLK = 5;
     public ChannelFragment() {
         // Required empty public constructor
     }
@@ -103,11 +108,13 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
                 super.onScrollStateChanged(recyclerView, newState);
 
                 if (!recyclerView.canScrollVertically(1) && !isLoading) {
-                        Log.d("App: Calling","Calling RequestYoutubeAPI()"+adapter.getItemCount()+" - "+mListData.size());
-                        new RequestYoutubeAPI().execute();
-                    }
+                    Log.d("App: Calling","Calling RequestYoutubeAPI()"+adapter.getItemCount()+" - "+mListData.size());
+                    new RequestYoutubeAPI().execute();
+                }
             }
         });
+
+        sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
         initList(mListData);
         new RequestYoutubeAPI().execute();
@@ -147,11 +154,54 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
 
                 // Prepare an Interstitial Ad Listener
                 interstitial.setAdListener(new AdListener() {
+
                     public void onAdLoaded() {
                         Log.d("Adss","calling onLoaded displayInterstitial");
                         // Call displayInterstitial() function
                         pb.setVisibility(View.GONE);
-                        displayInterstitial();
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        //here check the counter for threshold value
+                        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                        Date date = new Date();
+                        String currentDate = formatter.format(date);
+
+                        if(!sharedpreferences.contains("date")){
+                            editor.putString("date", currentDate);
+                          //  Toast.makeText(getActivity(), "Setting date", Toast.LENGTH_LONG).show();
+                            editor.commit();
+                        }
+                        if(!sharedpreferences.contains("count")){
+                          //  Toast.makeText(getActivity(), "Setting count", Toast.LENGTH_LONG).show();
+                            editor.putInt("count",0);
+                            editor.commit();
+                        }
+
+                        //now sharedpreference contains both
+                        if(!sharedpreferences.getString("date","date").equals(currentDate)){
+                            //not equal to current date so set and set count as 0
+                            editor.putString("date",currentDate);
+                            editor.putInt("count",0);
+                            editor.commit();
+                            displayInterstitial();
+                        }else{
+                            //date is already present, check for counter
+                            if(sharedpreferences.getInt("count",0) == MAX_CLICLK ){
+                                //then directly pass to another activity
+                                try{
+                                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                                    intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);
+                                    startActivity(intent);
+                                }catch (Exception e){
+                                    Log.d("Adds", Arrays.toString(e.getStackTrace()));
+                                }
+                            }else{
+                                //increase count and show ad
+                                displayInterstitial();
+                            }
+                        }
+
+
+                        //show this if user has not reached threshold else don't show this
                     }
 
                     @Override
@@ -163,6 +213,17 @@ public class ChannelFragment extends Fragment implements  SearchView.OnQueryText
                         intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);
                         startActivity(intent);
                     }
+
+                    @Override
+                    public void onAdLeftApplication() {
+                        int count = sharedpreferences.getInt("count",0);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putInt("count",++count);
+                        Log.d("Adds","Add Clicked "+count);
+                        // Toast.makeText(getActivity(), "Clicked "+count, Toast.LENGTH_LONG).show();
+                        editor.commit();
+                    }
+
 
                     @Override
                     public void onAdOpened() {

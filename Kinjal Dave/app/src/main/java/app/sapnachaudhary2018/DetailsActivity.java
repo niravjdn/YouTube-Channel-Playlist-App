@@ -212,7 +212,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements
     @Override
     public void onBackPressed() {
         Log.d("Ap:","isFullScreen "+isFullScreen);
-        if (isFullScreen){
+        if (isFullScreen && mYoutubePlayer != null){
             mYoutubePlayer.pause();
             mYoutubePlayer.setFullscreen(false);
         }

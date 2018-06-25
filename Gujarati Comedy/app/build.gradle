@@ -7,8 +7,8 @@ android {
         applicationId "com.techyappdevelopers.gujaratifuncomedy"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 14
-        versionName "1.9"
+        versionCode 18
+        versionName "2.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
