@@ -57,10 +57,13 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
 
     private static String GOOGLE_YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY;//here you should use your api key for testing purpose you can use this api also
     private  String PLAYLIST_ID = "PL_mlupJ4yJIhmXRzCmdN_1IXcwvBGyUpj";//here you should use your playlist id for testing purpose you can use this api also
-    private  String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + PLAYLIST_ID + "&maxResults=150&key=" + GOOGLE_YOUTUBE_API_KEY + "";
+    private  String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + PLAYLIST_ID + "&maxResults=50&key=" + GOOGLE_YOUTUBE_API_KEY + "";
 
 
     private InterstitialAd interstitial;
+    private String nextPageToken="";
+    private boolean isFirstLoad = true;
+    private boolean isLoading = false;
     private YoutubeDataModel youtubeDataModel;
     private RecyclerView mList_videos = null;
     private VideoPostAdapter adapter = null;
@@ -97,6 +100,19 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
         mList_videos.setItemAnimator(new DefaultItemAnimator());
 
         setHasOptionsMenu(true);
+
+        mList_videos.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+
+                if (!recyclerView.canScrollVertically(1) && !isLoading) {
+                    Log.d("App: Calling","Calling RequestYoutubeAPI()"+adapter.getItemCount()+" - "+mListData.size());
+                    new RequestYoutubeAPI().execute();
+                }
+            }
+        });
+
         sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
         initList(mListData);
@@ -242,6 +258,7 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
     private class RequestYoutubeAPI extends AsyncTask<Void, String, String> {
         @Override
         protected void onPreExecute() {
+            isLoading = true;
             pb.setVisibility(View.VISIBLE);
             super.onPreExecute();
         }
@@ -250,8 +267,19 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
         protected String doInBackground(Void... params) {
             Log.d("App: async","ASYNC Task Called.");
             HttpClient httpClient = new DefaultHttpClient();
-            HttpGet httpGet = new HttpGet(CHANNLE_GET_URL);
-            Log.e("URL", CHANNLE_GET_URL);
+            HttpGet httpGet;
+            if(!nextPageToken.equals("")){
+                String appendString = "&pageToken="+nextPageToken;
+                httpGet = new HttpGet(CHANNLE_GET_URL+appendString);
+                Log.e("URL", CHANNLE_GET_URL+appendString);
+            }else if(isFirstLoad)
+            {
+                httpGet = new HttpGet(CHANNLE_GET_URL);
+                Log.e("URL", CHANNLE_GET_URL);
+            }else
+                return null;
+
+
             try {
                 HttpResponse response = httpClient.execute(httpGet);
                 HttpEntity httpEntity = response.getEntity();
@@ -267,18 +295,21 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
 
         @Override
         protected void onPostExecute(String response) {
-
             pb.setVisibility(View.GONE);
             if (response != null) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     Log.e("response", jsonObject.toString());
-                    mListData = parseVideoListFromResponse(jsonObject);
-                    initList(mListData);
+                    mListData.addAll(parseVideoListFromResponse(jsonObject));
+                    if(isFirstLoad){
+                        isFirstLoad = false;
+                        initList(mListData);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
+            isLoading = false;
         }
     }
 
@@ -287,6 +318,14 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
 
         if (jsonObject.has("items")) {
             try {
+                if(!jsonObject.has("nextPageToken")){
+                    //now it does not contain nextPageToken means it has prevPageToken - so it's last page
+                    nextPageToken = "";
+                    Log.d("App: prevPageToken ","Setting nextPageToken Blank");
+                }else{
+                    nextPageToken = jsonObject.getString("nextPageToken");
+                    Log.d("App: nextPageToken ",""+nextPageToken);
+                }
                 JSONArray jsonArray = jsonObject.getJSONArray("items");
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject json = jsonArray.getJSONObject(i);

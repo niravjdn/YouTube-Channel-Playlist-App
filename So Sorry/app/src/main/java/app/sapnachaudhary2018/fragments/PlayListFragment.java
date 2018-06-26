@@ -57,7 +57,7 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
 
     private static String GOOGLE_YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY;//here you should use your api key for testing purpose you can use this api also
     private  String PLAYLIST_ID = "PL_mlupJ4yJIhmXRzCmdN_1IXcwvBGyUpj";//here you should use your playlist id for testing purpose you can use this api also
-    private  String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + PLAYLIST_ID + "&maxResults=150&key=" + GOOGLE_YOUTUBE_API_KEY + "";
+    private  String CHANNLE_GET_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + PLAYLIST_ID + "&maxResults=50&key=" + GOOGLE_YOUTUBE_API_KEY + "";
 
 
     private InterstitialAd interstitial;
