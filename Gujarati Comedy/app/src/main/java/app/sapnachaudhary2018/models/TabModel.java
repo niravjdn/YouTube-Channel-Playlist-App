@@ -10,9 +10,9 @@ import java.util.List;
 
 public class TabModel {
     public static List<String> tabnameList = Arrays.asList(
-            "Jigli & Khajur","Dhaval Domadiya", "Gujju Tolki","Yani Tube", "The Comedy Factory", "Crazzy Gujjus","Amit Khuva","Other");
-    public static List<String> idRegardingyoutubeList = Arrays.asList("UCZD40eidHy1UFjn4-C-C39Q","UCTEfw4GhRUFoeUD6DQZ4RWA", "UCY3SRAnNDPbX7xnj2F-YhYA","UCSE1kqyWhjQC8uWJqnDpPgg","UCu1aSs2qmjySrt_HkEmblvQ", "UCiFBw94UXJgEot628xgI2ew","PL_mlupJ4yJIhYXkghWCM1DT3iLj_djH08","PL_mlupJ4yJIjhM7FzYHZRZpGjxOSIMYdE");
-    public static List<String> playlistOrChannelList = Arrays.asList("channel","channel", "channel", "channel","channel","channel","playlist","playlist");
+            "Jigli & Khajur","Dhaval Domadiya", "Akki & Ankit" ,"Ram Mandal","Gujju Tolki","Yani Tube", "The Comedy Factory", "Crazzy Gujjus","Amit Khuva","Other");
+    public static List<String> idRegardingyoutubeList = Arrays.asList("UCZD40eidHy1UFjn4-C-C39Q","UCTEfw4GhRUFoeUD6DQZ4RWA", "UCNwptnxpwizVqqZmh0bfX7A","PL_mlupJ4yJIjmZR-Bbj6vG26Rocp3OXTa" ,"UCY3SRAnNDPbX7xnj2F-YhYA","UCSE1kqyWhjQC8uWJqnDpPgg","UCu1aSs2qmjySrt_HkEmblvQ", "UCiFBw94UXJgEot628xgI2ew","PL_mlupJ4yJIhYXkghWCM1DT3iLj_djH08","PL_mlupJ4yJIjhM7FzYHZRZpGjxOSIMYdE");
+    public static List<String> playlistOrChannelList = Arrays.asList("channel","channel", "channel" ,"playlist" ,"channel", "channel","channel","channel","playlist","playlist");
 
 
     public static List<String> natakTabnameList = Arrays.asList(
