@@ -15,6 +15,9 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
     $id = $r1 . $r2 . $r3;
     $fileName = $id . $_FILES['image']['name'];
     $fileName = preg_replace("/[^a-zA-Z0-9.]/", "", $fileName);
+
+      
+
     $thumb = explode('.', $fileName);
     $thumbname = $thumb[0];
     $thumbname = $thumbname . ".jpg";

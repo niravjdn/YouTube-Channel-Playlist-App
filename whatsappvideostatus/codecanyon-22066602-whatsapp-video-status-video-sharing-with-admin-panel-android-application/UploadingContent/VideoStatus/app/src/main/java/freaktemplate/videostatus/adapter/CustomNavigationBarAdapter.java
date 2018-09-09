@@ -169,7 +169,9 @@ public class CustomNavigationBarAdapter extends BaseAdapter {
         Intent share = new Intent(android.content.Intent.ACTION_SEND);
         share.setType("text/plain");
         share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-        share.putExtra(Intent.EXTRA_TEXT, mContext.getString(R.string.playStore_address) + mContext.getPackageName());
+        String sAux = mContext.getString(R.string.app_name)+" is an amazing app.\n\nLet me recommend you this application\n\n";
+        sAux = sAux + "https://play.google.com/store/apps/details?id="+mContext.getPackageName()+" \n\n";
+        share.putExtra(Intent.EXTRA_TEXT,sAux);
         mContext.startActivity(Intent.createChooser(share, "Share link!"));
 
     }

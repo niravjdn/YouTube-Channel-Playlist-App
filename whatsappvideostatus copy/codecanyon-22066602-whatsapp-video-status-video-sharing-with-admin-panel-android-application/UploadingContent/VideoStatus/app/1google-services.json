@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "593922724128",
+    "firebase_url": "https://whatsapp-status-48112.firebaseio.com",
+    "project_id": "whatsapp-status-48112",
+    "storage_bucket": "whatsapp-status-48112.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593922724128:android:cb0b6893c6c45a5a",
+        "android_client_info": {
+          "package_name": "freaktemplate.videostatus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593922724128-9l3liep762pdvigqfdo94potsb9q1ki4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdzKYNUaJcEwTPefrq9s6TR3E5WfBht7s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

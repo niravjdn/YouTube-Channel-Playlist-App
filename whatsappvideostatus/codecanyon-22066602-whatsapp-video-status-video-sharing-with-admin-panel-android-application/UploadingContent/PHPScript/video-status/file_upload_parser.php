@@ -10,15 +10,17 @@ if($file["error"]) {
     die("ERROR: File couldn't be processed");
 
 }
-		$path = $_FILES['image']['name'];
+        $path = $_FILES['image']['name'];
         $ext = pathinfo($path, PATHINFO_EXTENSION);
         $tmp_file = $_FILES['image']['tmp_name'];
         $fileName = $_FILES['image']['name'];
         $fileName = preg_replace("/[^a-zA-Z0-9.]/", "", $fileName);
+        
+
         $thumb = explode('.', $fileName);
         $thumbname = $thumb[0];
         $thumbname = $thumbname . ".jpg";
         $file_path = "images/video/" . $fileName;
         $imagename = "category_" . time() . "." . $ext;
-		move_uploaded_file($tmp_file, $file_path)
+        move_uploaded_file($tmp_file, $file_path)
 ?>

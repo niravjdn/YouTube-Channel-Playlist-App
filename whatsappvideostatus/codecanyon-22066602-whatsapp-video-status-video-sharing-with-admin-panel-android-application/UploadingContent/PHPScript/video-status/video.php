@@ -173,10 +173,10 @@ if (isset($_REQUEST['delete'])) {
                                 <table class="table table-striped table-bordered">
                                     <thead>
                                       <tr>
-                                        <th>#</th>
-                                        <th> <?php echo ('Video Title'); ?> </th>
+                                        <th>#</th>                                        
                                         <th> <?php echo ('Category'); ?> </th>
                                         <th> <?php echo ('Subcategory'); ?> </th>
+                                        <th> <?php echo ('Video Title'); ?> </th>
                                         <th> <?php echo ('Video'); ?> </th>
                                         <th> <?php echo ('Action'); ?> </th>
                                       </tr>
@@ -344,9 +344,9 @@ if (isset($_REQUEST['delete'])) {
                                 <thead>
                                   <tr>
                                     <th>#</th>
-                                    <th> <?php echo ('Video Title'); ?> </th>
                                     <th> <?php echo ('Category'); ?> </th>
                                     <th> <?php echo ('Subcategory'); ?> </th>
+                                    <th> <?php echo ('Video Title'); ?> </th>
                                     <th> <?php echo ('Video'); ?> </th>
                                     <th> <?php echo ('Action'); ?> </th>
                                   </tr>

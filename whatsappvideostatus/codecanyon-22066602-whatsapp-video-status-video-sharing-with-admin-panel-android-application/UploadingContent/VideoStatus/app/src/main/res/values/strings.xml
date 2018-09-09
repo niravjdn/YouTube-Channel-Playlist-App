@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">VideoStatus</string>
+    <string name="app_name" translatable="false">Video Status</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="nav_home">Home</string>
@@ -10,6 +10,8 @@
     <string name="nav_rate">Rate Us</string>
     <string name="nav_share">Share App</string>
     <string name="nav_request">Request Video</string>
+
+    <string name="pubName">Techy App Developers</string>
 
     <string name="link" translatable="false">http://techtrice.com/nirav33/</string>
     <!--<string name="link" translatable="false">http://192.168.0.122/PHPScript/video-status/</string>-->
@@ -22,7 +24,7 @@
 
     <string name="facebook_app_id" translatable="false">141705999996298</string>
     <string name="txt_search">Search</string>
-    <string name="authority" translatable="false">freaktemplate.videostatus.fileProvider</string>
+    <string name="authority" translatable="false">com.techyappdevelopers.wpstatus1.fileProvider</string>
     <string name="destinationFolderName" translatable="false">/VideoStatus</string>
     <string name="whatsapp_warning">WhatsApp not installed in the device</string>
     <string name="instagram_warning">Instagram not installed in the device</string>
@@ -33,17 +35,17 @@
     <string name="show_admmob_ads" translatable="false">yes</string>
 
 
-    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3730886167471578/6756170800</string>
-    <string name="app_ad_id" translatable="false">ca-app-pub-3730886167471578/6756170800</string>
-    <string name="interstial_ad_unit_id" translatable="false">ca-app-pub-3730886167471578/3746864089</string>
+    <string name="app_ad_id" translatable="false">ca-app-pub-6580559597285351~8930033574</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6580559597285351/5920726855</string>
+    <string name="interstial_ad_unit_id" translatable="false">ca-app-pub-6580559597285351/4416073492</string>
 
     <!--Facebook Admob Integration-->
-    <string name="show_facebook_ads" translatable="false">yes</string>
+    <string name="show_facebook_ads" translatable="false">no</string>
     <string name="facebook_interstial" translatable="false">141705999996298_194497101383854</string>
     <string name="facebook_banner_id" translatable="false">141705999996298_194490801384484</string>
 
 
-    <string name="email" translatable="false">freaktemplate@gmail.com</string>
+    <string name="email" translatable="false">techyappdevelopers@gmail.com</string>
     <string name="txt_about_us">About Us</string>
     <string name="txt_privacy_policy">Privacy Policy</string>
     <string name="txt_setting">SETTING</string>
@@ -59,14 +61,15 @@
     <string name="error_file_extst">File doesn\'t exists!</string>
     <string name="error_no_file">File didn\'t existed in storage!</string>
     <string name="txt_popular">POPULAR</string>
+
     <string name="playStore_address" translatable="false">https://play.google.com/store/apps/details?id=</string>
     <string name="delete_all">Delete all videos permanently from storage?</string>
     <string name="txt_no_email_client">There is no email client exists</string>
     <string name="request_rateus">Please Rate Us</string>
     <string name="txt_request_video">Request Video</string>
     <string name="txt_rate_it">Rate it</string>
-    <string name="txt_rate_part1">Thanks for using the application. If you like</string>
-    <string name="txt_rate_part2">please rate us! Your feedback is important for us!</string>
+    <string name="txt_rate_part1">Thanks for using the application. If you like </string>
+    <string name="txt_rate_part2">, please rate us! Your feedback is important for us!</string>
     <string name="txt_not_now">Not now</string>
     <string name="txt_home">HOME</string>
     <string name="txt_sort_by_old_to_new">Sort by old to new</string>

@@ -21,9 +21,22 @@ if(isset($_POST['submit'])) {
         $tmp_file = $_FILES['image']['tmp_name'];
         $fileName = $_FILES['image']['name'];
         $fileName = preg_replace("/[^a-zA-Z0-9.]/", "", $fileName);
+
+        
+
         $thumb = explode('.', $fileName);
         $thumbname = $thumb[0];
         $thumbname = $thumbname . ".jpg";
+        
+
+
+        //unique file name
+        // $datetime = date("Y-m-d hisa");
+        // $thumbname .= $datetime;
+        // $fileName = $datetime .  $fileName;    
+
+        
+
         if ($file_path = "images/video/" . $fileName); {
         //echo "Here " . $fileName; exit();
         ?>
@@ -114,6 +127,7 @@ if(isset($_POST['submit'])) {
 
         </script>
         <?php
+            $video_title = ucwords($video_title);
             $sql = "insert into status_video (`cat_id`,`subcat_id`,`video_title`,`video`,`image`) values ('$cat_id','$subcat_id','$video_title','$fileName','$thumbname')";
             $res = mysqli_query($conn,$sql);
             $success = "<div class='progress progress-striped active'>

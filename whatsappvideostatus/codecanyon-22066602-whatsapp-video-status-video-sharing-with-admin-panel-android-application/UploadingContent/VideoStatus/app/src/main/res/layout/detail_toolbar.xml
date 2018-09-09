@@ -16,6 +16,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:src="@drawable/btn_facebook"
         android:padding="8dp"
         android:id="@+id/btn_facebook"

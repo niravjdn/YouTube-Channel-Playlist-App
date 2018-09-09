@@ -1,6 +1,7 @@
 package freaktemplate.videostatus.activity;
 
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -181,10 +182,21 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 openAboutUs();
                 break;
             case R.id.rel_moreApps:
-                String url = getString(R.string.playStore_address) + getPackageName();
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                String pubName = getString(R.string.pubName);
+                Log.d("App: packageName",getPackageName()+"");
+                Uri uri = Uri.parse("market://search?q=pub: "+pubName);
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                // To count with Play market backstack, After pressing back button,
+                // to taken back to our application, we need to add following flags to intent.
+                goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                        Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                        Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                try {
+                    startActivity(goToMarket);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://play.google.com/store/search?q=pub:" + pubName)));
+                }
                 break;
         }
 

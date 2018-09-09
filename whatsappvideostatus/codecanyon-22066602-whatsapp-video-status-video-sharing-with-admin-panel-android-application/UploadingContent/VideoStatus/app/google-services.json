@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "720928815104",
-    "firebase_url": "https://videostatus-4c35f.firebaseio.com",
-    "project_id": "videostatus-4c35f",
-    "storage_bucket": "videostatus-4c35f.appspot.com"
+    "project_number": "25957449519",
+    "firebase_url": "https://wp-status-1.firebaseio.com",
+    "project_id": "wp-status-1",
+    "storage_bucket": "wp-status-1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:720928815104:android:cb0b6893c6c45a5a",
+        "mobilesdk_app_id": "1:25957449519:android:5c73e6ee1aadd304",
         "android_client_info": {
-          "package_name": "freaktemplate.videostatus"
+          "package_name": "com.techyappdevelopers.wpstatus1"
         }
       },
       "oauth_client": [
         {
-          "client_id": "720928815104-27j6ap0g3tdjksocatt7bh60a7l26sg6.apps.googleusercontent.com",
+          "client_id": "25957449519-u4cvg2s93flr3svko9857g9d5vva53q2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "freaktemplate.videostatus",
-            "certificate_hash": "e2f51951ab22475036c8273a6d5577bd3194797a"
+            "package_name": "com.techyappdevelopers.wpstatus1",
+            "certificate_hash": "87b786b2834db78ca73fd52d18fa1171d118531d"
           }
         },
         {
-          "client_id": "720928815104-esr88q781fsutr3felqibp8sujpju0j5.apps.googleusercontent.com",
+          "client_id": "25957449519-jp2rv60gtf1r36k5ln7aafapisufr6o4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCO0diO1rFrZn4Y6sIqBKf9y3bZFqC5770"
+          "current_key": "AIzaSyC7iJU2U2Sv-m17W4iT2i5DKQN4kLtiNGs"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "720928815104-esr88q781fsutr3felqibp8sujpju0j5.apps.googleusercontent.com",
+              "client_id": "25957449519-jp2rv60gtf1r36k5ln7aafapisufr6o4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
