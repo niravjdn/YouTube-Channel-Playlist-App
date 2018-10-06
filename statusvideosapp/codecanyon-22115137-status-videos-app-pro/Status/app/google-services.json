@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "728297364127",
+    "firebase_url": "https://video-status-bbb5d.firebaseio.com",
+    "project_id": "video-status-bbb5d",
+    "storage_bucket": "video-status-bbb5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728297364127:android:ce9cbe83b3d747aa",
+        "android_client_info": {
+          "package_name": "com.techyappdevelopers.videostatus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728297364127-nmqbf0vjh07ffd5je4gspasuhru60scg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techyappdevelopers.videostatus",
+            "certificate_hash": "be418a40c5fd7797ac7b14135c0f0b43de7856c4"
+          }
+        },
+        {
+          "client_id": "728297364127-a7b9cjfsaeffh0pl8fhhac20fv2h2st8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaHTTsHs9Kq7KenmR7qHRhLqcTJ7UzlN0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728297364127-a7b9cjfsaeffh0pl8fhhac20fv2h2st8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

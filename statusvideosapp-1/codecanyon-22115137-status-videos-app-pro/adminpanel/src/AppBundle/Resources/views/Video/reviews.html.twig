@@ -1,0 +1,72 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+		<div class="row">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="{{path("app_video_index")}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+				</div>
+				<div class="col-md-4">
+					<a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">video_library</i> {{videos_count}} video</a>
+				</div>
+				<div class="col-md-4">
+					<a href="{{path("app_video_add")}}" class="btn btn-rose btn-lg pull-right add-button col-md-12" title=""><i class="material-icons" style="font-size: 30px;">add_box</i> NEW video </a>
+				</div>
+			</div>
+			<div class="row">
+       		{% for video in videos %}
+	       		<div class="col-md-4" style="height:340px">
+		            <div class="card card-product"  >
+		               	<div class="wallpaper-title" >
+		                	{{video.title}}
+		                </div>
+		               <img class="img " style="height:auto;background-color:#fff" src="{{asset(video.media.link)|imagine_filter("image_thumb")}}">
+		                <img src="{{asset("img/play.png")}}" style="position: absolute;height: 83px;width: auto;top: 70px;left: 10px;">
+		                <div class="card-content" style=" padding: 0px 0px;">
+		                    <div class="card-actions">
+		                        <a href="{{path("app_video_view",{id:video.id})}}" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="" data-original-title="View">
+		                            <i class="material-icons">remove_red_eye</i>
+		                        </a>
+		                        <a href="{{path("app_video_review",{id:video.id})}}" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="" data-original-title="Review">
+		                            <i class="material-icons">check</i>
+		                        </a>
+		                        <a href="{{path("app_video_delete",{id:video.id})}}" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+		                            <i class="material-icons">close</i>
+		                        </a>
+		                    </div>
+		                </div>
+
+
+		                <div class="card-footer">
+	                        <div class="price">
+
+		                         <div class="wallpaper-logo" >
+		                        	{% if video.user.image == "" %}
+		                        		{{video.user.name}}
+		                        	{% else %}
+		                        		<img src="{{video.user.image}}" class="avatar-img" alt=""> 
+		                        	{% endif %}
+		                        	<span>{{video.user.name}}</span>
+		                         </div>
+	                        </div>
+	                        <div class="stats pull-right">
+	                           <div class="wallpaper-logo" >{{video.created|ago}}</div>
+	                        </div>
+	                    </div>
+		            </div>
+		          </div>
+	          {% else %}
+		          <div class="card"  style="text-align: center;" >
+		          <br>
+		          <br>
+		          <img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" ="">
+	              <br>
+	              <br>
+		          </div>
+            {% endfor %}
+       			</div>
+            <div class=" pull-right">
+        {{ knp_pagination_render(videos) }}
+      </div>
+</div>
+{% endblock%}

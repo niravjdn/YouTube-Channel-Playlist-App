@@ -1,0 +1,339 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Status Videos App - Documentation</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="has-_-san">
+	<meta name="copyright" content="has-_-san">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2017-02-01T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#E9E9E9;color:#383838;}
+		::-moz-selection{background:#FF9900;color:#424242;}
+		::selection{background:#FF9900;color:#424242;}
+		#documenter_sidebar #documenter_logo{background-size:100px 100px;background-image:url(assets/images/image_1.png);}
+		a{color:#FF9900;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			background-image: -moz-linear-gradient(top, #FFFFFF, #B56D00);
+			background-image: -ms-linear-gradient(top, #FFFFFF, #B56D00);
+			background-image: -webkit-gradient(linear, 0 0, 0 FFFFFF%, from(#BCBCBC), to(#B56D00));
+			background-image: -webkit-linear-gradient(top, #FFFFFF, #B56D00);
+			background-image: -o-linear-gradient(top, #FFFFFF, #B56D00);
+			background-image: linear-gradient(top, #FFFFFF, #B56D00);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#B56D00', GradientType=0);
+			border-color: #B56D00 #B56D00 #bfbfbf;
+			color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		border-color: #FFFFFF #FFFFFF #bfbfbf;
+		background-color: #B56D00;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+		img{
+			max-width: 800px !important;
+		}
+	</style>
+	
+</head>
+<body class="documenter-project-contacts-cloud-">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			
+			<li><a href="#which_android_studio_version_is_needed" title="Which Android Studio version is needed?">Which Android Studio version is needed?</a></li>
+			<li><a href="#how_to_open_the_project_in_android_studio" title="How to open the project in Android Studio?">How to open the project in Android Studio?</a></li>
+			<li><a href="#how_to_change_the_package_name" title="How to change the package name? ">How to change the package name? </a></li>
+			<li><a href="#how_to_get_fire_base" title="How to Config Firebase and google login">How to Config Firebase and google login</a></li>
+			<li><a href="#how_to_get_facebook_login" title="how to Config Facebook Login">how to Config Facebook Login</a></li>
+			<li><a href="#how_to_setup_panel_admin" title="How to setup your admin panel">How to setup your admin panel</a></li>
+			<li><a href="#validate_license" title="Validate your License-(Purchase Code) ">Validate your License-(Purchase Code) </a></li>
+			<li><a href="#config_subscription" title="Config Subscription (in app purchase) ">Config Subscription (in app purchase) </a></li>
+			<li><a href="#how_to_change_app_name" title="How to change app name?">How to change app name?</a></li>
+			<li><a href="#how_to_change_app_infos" title="How to change app infos?">How to enter my infos into the application ?</a></li>
+			<li><a href="#how_to_enable_disbale_and_change_admob_publisher_id" title="How to Enable/Disbale and change AdMob publisher id?">How to Enable/Disbale and change AdMob publisher id?</a></li>
+			<li><a href="#how_can_you_translate_your_app_and_panel_admin" title="How can you translate your App and Panel Admin">How can you translate your App and Panel Admin</a></li>
+			<li><a href="#how_can_you_customize_your_app_theme_icon" title="How can you customize your App Theme">How can you Change your App Icon</a></li>
+			<li><a href="#update_1_1" title="Update 1.1">Update 1.1</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Ristana Inc 2017<br>
+			made with the <a href="http://rxa.li/documenter">Documenter v2.0</a>
+		</div>
+	</div>
+	<div id="documenter_content">
+		<section id="documenter_cover">
+			<h1>Status Videos App</h1>
+			<h2>Documentation</h2>
+			<div id="documenter_buttons">
+			</div>
+			<hr>
+			<ul>
+				<li>created: 16/05/2018</li>
+				<li>latest update: 16/06/2018</li>
+				<li>by: Ristana Inc</li>
+				
+				<li>email: <a href="mailto:ristana.inc@gmail.com">ristana.inc@gmail.com</a></li>
+			</ul>
+			<p></p>
+		</section>
+		
+		<section id="which_android_studio_version_is_needed">
+			<div class="page-header"><h3>Which Android Studio version is needed?</h3><hr class="notop"></div>
+			<p>
+			&nbsp;Latest Android Studio version is recommended, which can be downloaded from here:</p>
+			<p>
+				<a href="http://developer.android.com/intl/es/sdk/index.html">http://developer.android.com/intl/es/sdk/index.html</a></p>
+				<p>
+				<img alt="" src="assets/images/image_2.png"  ></p>
+				<p>
+				<img alt="" src="assets/images/image_3.png"></p>
+		</section>
+		<section id="how_to_open_the_project_in_android_studio">
+				<div class="page-header"><h3>How to open the project in Android Studio?</h3><hr class="notop"></div>
+				<ol>
+					<li>
+					Open Android Studio &gt; Open an Existing Android Studio Project &gt; Select Your Project build.gradle file &gt; ok &nbsp;</li>
+					<li>
+					&nbsp;Select Project&nbsp;</li>
+				</ol>
+				<p>
+				<img alt="" src="assets/images/image_4.png"></p>
+				<p>
+				&nbsp;</p>
+				<p>
+				<img alt="" src="assets/images/image_5.png"></p>
+
+				<iframe width="1000" height="600" src="https://www.youtube.com/embed/nAO3ASrr6yY" frameborder="0" allowfullscreen></iframe>
+
+		</section>
+		<section id="how_to_change_the_package_name">
+				<div class="page-header"><h3>How to change the package name? </h3><hr class="notop"></div>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/EwrxkeH6HxE" frameborder="0" allowfullscreen></iframe>
+		</section>
+		<section id="how_to_get_fire_base">
+				<div class="page-header"><h3>How to Config Firebase and google login</h3><hr class="notop"></div>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/fsoqKqBN84I" frameborder="0" allowfullscreen></iframe>
+		</section>
+		<section id="how_to_get_facebook_login">
+				<div class="page-header"><h3>how to Config Facebook Login</h3><hr class="notop"></div>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/vwU-M0oFclQ" frameborder="0" allowfullscreen></iframe>
+		</section>
+		<section id="how_to_setup_panel_admin">
+				<div class="page-header"><h3>how to setup your admin panel</h3><hr class="notop"></div>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/tQc_mNSeFq4" frameborder="0" allowfullscreen></iframe>
+				<br>
+					<li>
+					Open Android Studio &gt;Status Videos App &gt; java  &gt; your_package_name &gt; config &gt; config.java  </li>
+					<li>
+						Enter your api url inside <b>&quot;BASE_URL&quot;</b>  value :<br>
+						<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';">
+							<span style="color:#e8bf6a;">     public static final String BASE_URL     =   "http://panel.ristana.com/api/";  </span></pre>
+						</li>
+					</ol>
+		</section>
+		<section id="validate_license">
+				<div class="page-header"><h3>Validate your License-(Purchase Code) </h3><hr class="notop"></div>
+				<br>
+				<br>
+				<h1><a href="http://license.ristana.com/new.html" title="http://license.ristana.com/new.html">http://license.ristana.com/new.html</a></h1>
+				<br>
+				<br>
+				<br>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/1w8-HvNY5Lo" frameborder="0" allowfullscreen></iframe>
+		</section>
+		<section id="config_subscription">
+				<div class="page-header"><h3>Config Subscription (in app purchase) </h3><hr class="notop"></div>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/l4GYGs7jLtQ" frameborder="0" allowfullscreen></iframe>
+		</section>
+
+			<section id="how_to_change_app_name">
+				<div class="page-header"><h3>How to change app name?</h3><hr class="notop"></div>
+				<ol>
+					<li>
+					Open Android Studio &gt;Status Videos App &gt; res &gt; values &gt; strings.xml</li>
+					<li>
+						Enter your app name inside <b>&quot;app_name&quot;</b> string tag:<br>
+						<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+							<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;app_name&quot;</span><span style="color:#e8bf6a;">&gt;</span>Status Videos App<span style="color:#e8bf6a;">&lt;/string&gt;</span></pre>
+						</li>
+					</ol>
+					<p>
+					&nbsp;</p>
+					<p>
+					<img alt="" src="assets/images/image_11.png"></p>
+				</section>
+				<section id="how_to_change_app_infos">
+					<div class="page-header"><h3>How to enter my infos into the application ?</h3><hr class="notop"></div>
+					<ol>
+						<li>
+							Enter your policy privacy contnet  inside <b>&quot;policy_privacy_contnet&quot;</b> string tag:<br>
+							<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+								<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;policy_privacy_contnet&quot;</span><span style="color:#e8bf6a;">&gt;</span>Policy privacy contnet<span style="color:#e8bf6a;">&lt;/string&gt;</span></pre>
+						</li>
+						
+							</ol>
+							<p>
+							&nbsp;</p>
+							<p>
+							<img alt="" src="assets/images/image_11.png"></p>
+						</section>
+						<section id="how_to_enable_disbale_and_change_admob_publisher_id">
+							<div class="page-header"><h3>How to Enable/Disbale and change AdMob publisher id?</h3><hr class="notop"></div>
+							<ol>
+								<li>
+								Open Android Studio &gt;Status Videos App  &gt; res &gt; values &gt; strings.xml</li>
+								<li>
+								to add interstitial publisher id :  Enter your AdMob interstitial publisher id inside <b>&quot;ad_unit_id_interstitial&quot;  string tag: &nbsp;</li>
+							</ol>
+							<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+								<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;ad_unit_id_interstitial&quot;</span><span style="color:#e8bf6a;">&gt;</span>ca-app-pub-3447169368463700/8764576075<span style="color:#e8bf6a;">&lt;/string&gt;
+							</span></pre>
+							<ol>
+								<li>
+								<li>
+							 	to add banner publisher id :	Enter your AdMob banner publisher id inside <b>&quot;ad_unit_id_banner&quot;  string tag: &nbsp;</li>
+							</ol>
+							<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+								<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;ad_unit_id_banner&quot;</span><span style="color:#e8bf6a;">&gt;</span>ca-app-pub-3447169368463700/8764576075<span style="color:#e8bf6a;">&lt;/string&gt;
+							</span></pre>
+							<ol>
+								<li>
+								<li>
+							 	to add native publisher id :	Enter your AdMob banner publisher id inside <b>&quot;ad_uni_tid_native&quot;  string tag: &nbsp;</li>
+							</ol>
+							<ul>
+								<li>
+								To Enabled or Disbale AdMob Banner in your Application you can go Android Studio &gt; Status Videos App  &gt; res &gt; values &gt; strings.xml</li>
+								<li>
+								Chnage the value of the variabe AD_MOB_ENABLED_BANNER to true to enable the admobe&nbsp;</li>
+								<li><pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+									<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;AD_MOB_ENABLED_BANNER&quot;</span><span style="color:#e8bf6a;">&gt;</span>true<span style="color:#e8bf6a;">&lt;/string&gt;
+								</span></pre></li>
+								<li>
+								Chnage the value of the variabe AD_MOB_ENABLED_BANNER to false to diable the admobe&nbsp;</li>
+								<li><pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+									<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;AD_MOB_ENABLED_BANNER&quot;</span><span style="color:#e8bf6a;">&gt;</span>false<span style="color:#e8bf6a;">&lt;/string&gt;
+								</span></pre></li>
+							</ul>
+							<ul>
+							<li>
+								To Enabled or Disbale AdMob interstitial in your Application you can go Android Studio &gt; Status Videos App  &gt; res &gt; values &gt; strings.xml</li>
+								<li>
+								Chnage the value of the variabe AD_MOB_ENABLED_INTERSTITAL to true to enable the admobe&nbsp;</li>
+								<li><pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+									<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;AD_MOB_ENABLED_INTERSTITAL&quot;</span><span style="color:#e8bf6a;">&gt;</span>true<span style="color:#e8bf6a;">&lt;/string&gt;
+								</span></pre></li>
+								<li>
+								Chnage the value of the variabe AD_MOB_ENABLED_INTERSTITAL to false to diable the admobe&nbsp;</li>
+								<li><pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+									<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;AD_MOB_ENABLED_INTERSTITAL&quot;</span><span style="color:#e8bf6a;">&gt;</span>false<span style="color:#e8bf6a;">&lt;/string&gt;
+								</span></pre></li>
+															<ol>
+								<li>To set duration to show interstitial admob
+								<li>
+								Enter your Time by second in  <b>&quot;AD_MOB_INTERSTITAL_TIME&quot;  string tag: &nbsp;</li>
+							</ol>
+							<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+								<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;AD_MOB_INTERSTITAL_TIME&quot;</span><span style="color:#e8bf6a;">&gt;</span>60<span style="color:#e8bf6a;">&lt;/string&gt;
+							</span></pre>
+							</ul>
+							<p>
+							&nbsp;</p>
+							<p>
+							<img alt="" src="assets/images/image_11.png"></p>
+							<p>
+							</section>
+							<section id="how_can_you_translate_your_app_and_panel_admin">
+								<div class="page-header"><h3>How can you translate your App </h3><hr class="notop"></div>
+								<p>
+								To translate your app open Android Studio &gt;Status Videos App  &gt; res &gt; values &gt; strings.xml</p>
+								<p>
+								and change the value of each key to your new language :</p>
+								<p>
+								like :</p>
+								<p>
+								English :</p>
+								<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+									<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;action_settings&quot;</span><span style="color:#e8bf6a;">&gt;</span>Settings<span style="color:#e8bf6a;">&lt;/string&gt;</span></pre>
+									<p>
+									French :</p>
+									<pre style="background-color:#2b2b2b;color:#a9b7c6;font-family:'Menlo';font-size:9,0pt;">
+										<span style="color:#e8bf6a;">&lt;string </span><span style="color:#bababa;">name=</span><span style="color:#6a8759;">&quot;action_settings&quot;</span><span style="color:#e8bf6a;">&gt;</span>Param&egrave;tres<span style="color:#e8bf6a;">&lt;/string&gt;</span></pre>
+										<p>
+										&nbsp;</p>
+										<p>
+										<img alt="" src="assets/images/image_11.png"></p>
+									</section>
+										<section id="how_can_you_customize_your_app_theme_icon">
+										<div class="page-header"><h3>How can you change your  App icon </h3><hr class="notop"></div>
+										<p>
+										To change your App icon open Android Studio &gt;Status Videos App  &gt; res &gt; and: Right-click on "drawable"  and select "Reveal in finder"</p>
+										<p>And past you icon on the folders with name and size</p>
+										<ul>
+											<li>past and replace the ic_launcher.png image by your icon to drawable folder  with name logo.png and size 512px x 512 px</li>
+											<li>past and replace the ic_launcher.png image by your icon to mipmap-mdpi folder  with name ic_launcher.png and size 48px x 48 px</li>
+											<li>past and replace the ic_launcher.png image by your icon to mipmap-hdpi folder  with name ic_launcher.png and size 72px x 72 px</li>
+											<li>past and replace the ic_launcher.png image by your icon to mipmap-xhdpi folder  with name ic_launcher.png and size 96px x 96 px</li>
+											<li>past and replace the ic_launcher.png image by your icon to mipmap-xxhdpi folder  with name ic_launcher.png and size 144px x 144 px</li>
+											<li>past and replace the ic_launcher.png image by your icon to mipmap-xxxhdpi folder  with name ic_launcher.png and size 192px x 192 px</li>
+										</ul>
+										<p><img src="assets/images/image_18.png" alt=""></p>
+										<p><img src="assets/images/image_19.png" alt=""></p>
+											<p>
+											Once again, thank you so much for purchasing this app. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this app. No guarantees, but I&#39;ll do my best to assist. If you have a more general question relating to the apps on CodeCanyon, you might consider visiting the &quot;FAQ / Support&quot; section and asking your question in the &quot;Comments&quot; section at CodeCanyon app detail page.</p>
+											<p>
+										</section>
+										<section id="update_1_1">
+												<div class="page-header"><h3>Update to 1.1</h3><hr class="notop"></div>
+													<h4>To update you need to change this files by the new Ones and create the files not exits</h4>
+													<h3>In Android Application</h3>
+													<ul>
+														<li>services>NotifFirebaseMessagingService.java</li>
+														<li>Gradle Scripts > build.gradle (Module: app)   <small style="color:red">(keep you application id)</small></li>
+													</ul>
+													<h3>In Admin Panel</h3>
+													<ul>
+														<li>admin_panel/src/AppBundle/Controller/VideoController.php</li>
+													</ul>	
+										</section>
+									</div>
+								</body>
+							</html>
+
+
+
