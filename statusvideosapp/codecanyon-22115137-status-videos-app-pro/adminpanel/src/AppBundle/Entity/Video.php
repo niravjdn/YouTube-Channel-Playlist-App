@@ -102,7 +102,7 @@ class Video
     private $file;
 
     /**
-     * @Assert\File(mimeTypes={"video/mp4" },maxSize="20M")
+     * @Assert\File(mimeTypes={"video/mp4" },maxSize="200M")
      */
     private $filevideo;
 

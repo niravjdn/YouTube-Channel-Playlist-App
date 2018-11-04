@@ -2,9 +2,9 @@
 parameters:
     database_host: localhost
     database_port: 3306
-    database_name: videostatus
-    database_user: root
-    database_password: M0XYao9lgv1Y
+    database_name: zadmin_videos
+    database_user: user
+    database_password: e2are5uhu
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null

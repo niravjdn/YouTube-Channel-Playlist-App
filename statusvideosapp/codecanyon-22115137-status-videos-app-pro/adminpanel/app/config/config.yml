@@ -12,7 +12,7 @@ parameters:
     files_directory_mp3: '%kernel.root_dir%/../public_html/files/'
     files_directory_read: '/uploads/'
     files_directory_read_mp3: '/files/'
-    token_app: "8cve98hty47h2uf0dfg4re7fg0wdhn24ffr3er3reg67yu36"
+    token_app: "8cve98hty47h2uf0dfg4re7fg0wdhn24ffr3er3reg67yu40"
     fire_base_key: AIzaSyDdwMrKugEpQMTUw0X8T1pCWrTYKTyPQi4
 framework:
     translator: { fallbacks: [en] }

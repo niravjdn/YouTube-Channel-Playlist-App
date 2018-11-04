@@ -61,23 +61,25 @@
                 android:layout_marginBottom="3dp"
                 android:text="login with Google"
                 />
+
             <com.facebook.login.widget.LoginButton
-                facebook:com_facebook_login_text="Login with facebook"
-                android:layout_above="@+id/text_view_skip_login"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
                 android:id="@+id/sign_in_button_facebook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_above="@+id/text_view_skip_login"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:textSize="15sp"
                 android:elevation="2dp"
-                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:paddingBottom="10dp" />
+                android:paddingTop="10dp"
+                android:textSize="15sp"
+                android:visibility="gone"
+                facebook:com_facebook_login_text="Login with facebook" />
             <Button
                 android:gravity="center"
                 android:clickable="true"

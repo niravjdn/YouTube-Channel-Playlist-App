@@ -89,7 +89,11 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         this.sign_in_button_google.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signIn();
+                try{
+                    signIn();
+                }catch (Exception e){
+                    Log.d("dekho",e.getMessage());
+                }
             }
         });
         this.text_view_skip_login.setOnClickListener(new View.OnClickListener() {

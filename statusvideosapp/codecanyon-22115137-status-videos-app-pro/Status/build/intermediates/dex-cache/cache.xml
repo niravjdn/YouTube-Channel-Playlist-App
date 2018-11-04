@@ -57,30 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/4c03d0d41ca9d48eff97833eeda303a559536896/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="b1c250352bb7bbd5ea1982ca5165f2a81f36b530">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e64d6a473984080862d3c18391cd34a70e98cd88/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Nirav/.gradle/caches/modules-2/files-2.1/com.android.support.constraint/constraint-layout-solver/1.0.2/b9cd8fc6bd15cb915735d34535db30ece0c44603/constraint-layout-solver-1.0.2.jar"
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
         sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_f2149fd6498b45ebf56f7f72f38614bb618748c7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/5f1667a27ab8a89293d04191f575d60bc0533900/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="0876f2dcb8d2740568506e7f0788c466b67ec103">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d233ff2552e2359b4af52055ef8737b60e773221/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,12 +84,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/e9287b1ed2db0aabd3582e58494b3eea9bb73134/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="2fdba52179163763ebd95f594bda3212409610c0">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_837093ae17c89da1221bad19066ba1c7bee1c4be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Nirav/.android/build-cache/e97b6f3863b786fb8e7f332e7318810a0ab616d9/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
         sha1="e5b6d089eeb8c142de02e78f8fcbe512e95a652f">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7e9b53cf41e916aedb3f1711723fb7987431221d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/01aac277b8d375aab66320a305398dab2680c8f9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="8484d5b4369cc7ab8d5722290ed25d134afde322">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5300bae51f732f2f77ab3dfa04560f58a89ffe42/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,15 +138,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/5c6497f18496c01f7ad243811e0591d38ba3bd39/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="0f5aec8dc543f3bae42c156cffe3c294c7cedd71">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_70955ab82557c4d15352fc731be9b17199a3e6c2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Nirav/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="true"
         optimize="true"
@@ -156,12 +147,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/4bcf01176506a28effc9f3af966c25c013bdaeff/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="4b4d991c18b19e1cc7ad627b15af81e6978a9e5f">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8381eec2132351f4374332913c0c93938df805df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Nirav/.android/build-cache/f9c2144c8da4e39704138e7b89845649cfab3ebe/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
         sha1="679c36376300693ca1e2c25e50602ce01b183965">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dcbec74b0fd7e177e964947480cc4f9d3e11dfd4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/da5b4317494af4a53cb70268a6626635fe0cacb0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="1439a2b692af15cdb118c424838c2c089f3cc4cc">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_42ea7bb58cf48dfbd8a8881953ca8804973a9b1d/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -180,15 +189,6 @@
         revision="27.0.1"
         sha1="add169444f38ac23ffae27326c75e33fedef73ba">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-1.0.44_7e0bd4212526c64c15bc8151a37f72ef4b349e01/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/90ca1d9b70a51dfbaf3c6b53be41198bc9a69da7/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="84cae65ae807cdcd663d4744f7f39e1c51bbdff2">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_47ab02de9ddbfc6b5dbdd295eee02d9b9c314900/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -216,15 +216,6 @@
         revision="27.0.1"
         sha1="f25b1adab1e4b4f5cecb9dc6f19798afabcb177b">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a37c95f6e603565c464d9d1cb21d39ea06389998/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/2527a482f3a6d7b366833d179cd2cb2c5113bee4/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="6d3dda07fbd30171edc150e4f13884fce5cd9926">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_62a0e2ea78d781a859df75ca6af9eefff085adf4/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -336,6 +327,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/ec16a4297db14fb0c069d6eab01afaa4d3bd4f47/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="5b05388ad2068934f5f5f1502cdc6040fa6836a5">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_59f77d2efa71e843f2ef72131c9560b404bfbfee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Nirav/.android/build-cache/710572ff447e2df15b87f872039e742f743a56d0/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -360,6 +360,15 @@
         revision="27.0.1"
         sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.3.0_527f96c336b7f2dcea8685f4b786c71dcdf09fc5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/248955f3dfd0dbf8440da64360bf6dac0dfbcf01/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="51439f5fd81208cae8623ce21acd1ca7a73a3d33">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c0e81713b4350410f31fe269bab98fb03809416c/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -408,6 +417,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/0f0bc2af79638283f22fc5234a5fc8adc7cc696e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="6da9d69b80f3af4232efd5cb17eb2605aa673e70">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ac0920bcbf32bc3b4f5e523cb638e210b2bbaffe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Nirav/.android/build-cache/cddb71cc2e0d571ee3401e848370aba1e900e0c1/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -439,7 +457,7 @@
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
-        sha1="96efa92a443c2d76d9ddff742977073df1ed164e">
+        sha1="f1064431cf035fc853afe66e6cd8c8ede42cd110">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b47149e3dbdc708877883ae99cb5e5f91f3a1fda/classes.dex" />
     </item>
     <item
@@ -453,30 +471,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/85b63a93b19e8725eca7b3721a8d55a49f7cea52/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="2fdba52179163763ebd95f594bda3212409610c0">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_65a238e01d92d03adf1f05386249794f3c99527a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Nirav/.android/build-cache/4cd0872486312af9b0cd7b0d3d97c415b500e183/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
         sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5cc72a534c4072b3392ec9efb99ac6c345f7c934/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/ca7de844f1953d23adf02e0f244aa39a53c1680a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="8484d5b4369cc7ab8d5722290ed25d134afde322">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_608b942637b3f231ddb7d0c2d0b9fe1d127a2348/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -516,12 +516,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/67031c77a0188b3bf7eef58d84f19f582a8ed644/output/jars/classes.jar"
+        jar="/Users/Nirav/.android/build-cache/12279464485667fc4aec388890070140a653c05e/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
-        sha1="51439f5fd81208cae8623ce21acd1ca7a73a3d33">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e3d4ace50b8ef1d3da6b9457d8b276c30669db87/classes.dex" />
+        sha1="b1c250352bb7bbd5ea1982ca5165f2a81f36b530">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c0ce2733809464aa164a70ff5180e34333c1fc5f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -633,24 +633,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/eec2618b50cd7d041aac65c6b4c08313595d9c32/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="88603d734296fa77a252c0199b57f4aba85ba277">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_63c8ec26a8bffe6be662c200d43cd280c46f2c89/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Nirav/.android/build-cache/038be58985b2f336a0d0aa9ab7de5e9a7f2c8fbb/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="27.0.1"
-        sha1="948a59b430e662e30d1f561e5c914a652f2bfaa8">
-        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7c9a8d1b82e5f8e3bc710f8d030e073a775af46f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -660,12 +642,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/eec2618b50cd7d041aac65c6b4c08313595d9c32/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="88603d734296fa77a252c0199b57f4aba85ba277">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_63c8ec26a8bffe6be662c200d43cd280c46f2c89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Nirav/.android/build-cache/89a6522d0f2e035f18e6b2c27c5f81c5ead29e19/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="27.0.1"
         sha1="dc73c5de83617537447413fb09834f3dadb276fb">
         <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9fc22245cdacb1b21565e72da58106e6df8deff8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Nirav/.android/build-cache/28e690bef3fd47d62cc1b6cb14a1dfb29df388cf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.1"
+        sha1="6d3dda07fbd30171edc150e4f13884fce5cd9926">
+        <dex dex="/Users/Nirav/AndroidStudioProjects/Android All Apps - Play Store/statusvideosapp/codecanyon-22115137-status-videos-app-pro/Status/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_03c783e45457c8106000fa50cd4f2d8f4248b2b4/classes.dex" />
     </item>
     <item
         is-multidex="true"
