@@ -34,6 +34,9 @@
         <activity
             android:name=".DetailsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection" />
+        <activity
+            android:name=".PlaylistActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
     </application>
 

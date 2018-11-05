@@ -57,10 +57,10 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:visible="false"
+            android:id="@+id/nav_playlist"
+            android:visible="true"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Playlist" />
         <item
             android:id="@+id/nav_manage"
             android:visible="false"

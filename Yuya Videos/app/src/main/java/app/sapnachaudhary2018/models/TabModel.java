@@ -10,30 +10,14 @@ import java.util.List;
 
 public class TabModel {
     public static List<String> tabnameList = Arrays.asList(
-            "Latest","NAVIDAD Y NOCHE BUENA");
-    public static List<String> idRegardingyoutubeList = Arrays.asList("UCBNs31xysxpAGMheg8OrngA","PL-xQp139lwbJWGIb5-VLXJPbsG1l_vP9x");
-    public static List<String> playlistOrChannelList = Arrays.asList("channel","playlist");
+            "Latest","NAVIDAD Y NOCHE BUENA","Test");
+    public static List<String> idRegardingyoutubeList = Arrays.asList("UCBNs31xysxpAGMheg8OrngA","PL-xQp139lwbJWGIb5-VLXJPbsG1l_vP9x","PL-xQp139lwbJWGIb5-VLXJPbsG1l_vP9x,PL-xQp139lwbJWGIb5-VLXJPbsG1l_vP9x");
+    public static List<String> playlistOrChannelList = Arrays.asList("channel","playlist","playlistSplash");
 
 
-
-
-    public static List<String> speechtabnameList = Arrays.asList(
-            "Sanjay Raval","Kaajal Oza Vaidya","Other");
-    public static List<String> speechIdRegardingyoutubeList = Arrays.asList("UC8UNjyAx5qAXbGvEsoQvvhA","UCdaBOxXgS01jBOFVG1x4j3w","PL_mlupJ4yJIgo7gDXtsbqjf10vp-y2zUl");
-    public static List<String> speechPlaylistOrChannelList = Arrays.asList("channel","channel","playlist");
-
-
-    public static List<String> bhajanTabnameList = Arrays.asList(
-            "Bhajan","Dayro");
-    public static List<String> bhajanIdRegardingyoutubeList = Arrays.asList("PL_mlupJ4yJIhyA03VXq_s1bEEgRUxn0nz","PL_mlupJ4yJIjmncM8Gl5K5LZ47-ZxWUZk");
-    public static List<String> bhajanPlaylistOrChannelList = Arrays.asList("playlist","playlist");
-
-
-    public static List<String> garbaTabnameList = Arrays.asList(
-            "Kinjal Dave","Geeta Rabari","Jignesh Kaviraj","Other");
-    public static List<String> garbaIdRegardingyoutubeList = Arrays.asList("PL_mlupJ4yJIiZNDf8H268PEc9zxR6eYlr","PL_mlupJ4yJIiZCWv8J2O9mxKMSC4Dr49w","PL_mlupJ4yJIijITMwsA0jro_FxXQP38Mw","PL_mlupJ4yJIgsoVG4Sb9SEFiva7NBz70R");
-    public static List<String> garbaPlaylistOrChannelList = Arrays.asList("playlist","playlist","playlist","playlist");
-
+    public static ArrayList<String> ptabnameList = new ArrayList<String>();
+    public static ArrayList<String> pidRegardingyoutubeList = new ArrayList<String>();
+    public static ArrayList<String> pplaylistOrChannelList = new ArrayList<String>();
 
 
     String tabName;

@@ -5,13 +5,13 @@
 
     <string name="api">AIzaSyATPcbQ5Ws1gwlXtFAS-LSmCPYUyrPNASk</string>
 
-    <string name="admob_test_interstitial_id">ca-app-pub-6580559597285351/9387402339</string>
+    <string name="admob_test_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
     <string name="admob_test_interstitial_id_backup">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="admob_interstitial_id">ca-app-pub-6580559597285351/9387402339</string>
+    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
 
-    <string name="admob_test_banner_id">ca-app-pub-6580559597285351/6952810684</string>
+    <string name="admob_test_banner_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="admob_test_banner_id_backup">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="admob_banner_id">ca-app-pub-6580559597285351/6952810684</string>
+    <string name="admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
 
     <string name="app_ad_id">ca-app-pub-6580559597285351~4322901621</string>
 
