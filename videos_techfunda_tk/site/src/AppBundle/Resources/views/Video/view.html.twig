@@ -1,0 +1,151 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+       <div class="col-sm-offset-1 col-md-10">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="rose">
+                    <i class="material-icons">image</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">{{video.title}}</h4>
+                    <video width="100%" src="{{asset(video.video.link)}}" controls>
+                      <source id="video_here">
+                        Your browser does not support HTML5 video.
+                     </video>
+                    <img src="{{asset(video.media.link)}}" class="fileinput-preview thumbnail " id="img-preview">
+                    <div style="text-align: center;">
+                        <div class="reaction">
+                            <span>
+                                <img src="{{asset("img/like.png")}}" alt="">
+                                <span class="label-reaction">{{video.like}}</span>
+                            </span>
+                            <span>
+                                <img src="{{asset("img/love.png")}}" alt="">
+                                <span class="label-reaction">{{video.love}}</span>
+                            </span>
+                            <span>
+                                <img src="{{asset("img/angry.png")}}" alt="">
+                                <span class="label-reaction">{{video.angry}}</span>
+                            </span>
+                            <span>
+                                <img src="{{asset("img/haha.png")}}" alt="">
+                                <span class="label-reaction">{{video.haha}}</span>
+                            </span>
+                            <span>
+                                <img src="{{asset("img/sad.png")}}" alt="">
+                                <span class="label-reaction">{{video.sad}}</span>
+                            </span>
+                            <span>
+                                <img src="{{asset("img/wow.png")}}" alt="">
+                                <span class="label-reaction">{{video.woow}}</span>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">{% if video.enabled %}
+                        <i class="material-icons" style="color:green;float:left">check_circle</i> <span class="check-label">Enabled</span>
+                        {% else %}
+                        <i class="material-icons" style="color:red;float:left">cancel</i> <span class="check-label">Disabled</span>
+                        {% endif %}</div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-6">{% if video.comment %}
+                        <i class="material-icons" style="color:green;float:left">check_circle</i> <span class="check-label">Comment Enabled</span>
+                        {% else %}
+                        <i class="material-icons" style="color:red;float:left">cancel</i> <span class="check-label">Comment Disabled</span>
+                        {% endif %}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Categories : </h4>
+                        </div>
+                        <div class="col-md-12" >
+                            {% for color in video.categories %}
+                                <span class="label label-rose " style="margin:5px;"> <b> {{color.title}} </b></span>  
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Languages : </h4>
+                        </div>
+                        <div class="col-md-12" >
+                            {% for language in video.languages %}
+                                <span class="label label-rose " style="margin:5px;background:#FF5722"> <b> {{language.language}} </b></span>  
+                            {% endfor %}
+                        </div>
+                    </div>
+                 </div>
+                <div class="card-footer">
+                    <div class="price">
+                         <div class="wallpaper-logo" style="color:#040303" >
+                        {% if video.user.image == "" %}
+                            {{video.user.name}}
+                        {% else %}
+                            <img src="{{video.user.image}}" class="avatar-img" alt=""> 
+                        {% endif %}
+                         <span>{{video.user.name}}</span>
+                     </div>
+                    </div>
+                    <div class="stats pull-right">
+                       <div class="wallpaper-logo"  style="color:#040303" >{{video.created|ago}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            {% for comment in video.comments %}
+                <div class="col-md-6">
+                    <ul class="timeline timeline-simple">
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge danger">
+                                <img src="{{comment.user.image}}" class="img-profile">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <a href="{{path("user_user_edit",{id:comment.user.id})}}" title="">
+                                        <span class="label label-danger">{{comment.user.name}}</span>
+                                    </a>
+                                    <span class="pull-right" >
+                                        <a href="{{path("app_comment_delete",{id:comment.id,"video":"true"})}}"  rel="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+                                            <i class="material-icons" style="color:red">delete</i>
+                                        </a>
+                                        {% if comment.enabled %}
+                                            <a href="{{path("app_comment_hide",{id:comment.id})}}"  rel="tooltip" data-placement="bottom" title="" data-original-title="Hide">
+                                                 <i class="material-icons">visibility_off</i>
+                                            </a>
+                                        {% else %}                                      
+                                            <a href="{{path("app_comment_hide",{id:comment.id})}}"  rel="tooltip" data-placement="bottom" title="" data-original-title="Show">
+                                                 <i class="material-icons">remove_red_eye</i>
+                                            </a>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>{{comment.contentclear}}</p>
+                                </div>
+                                <small class="pull-right label label-rose">
+                                     <span>{{comment.created|ago}}</span>
+                                </small>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+                {% else %}
+                <div class="col-md-12" >
+                    <div class="card"  style="margin-top: 0px;">
+                        <div class="card-content">
+                            <center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
