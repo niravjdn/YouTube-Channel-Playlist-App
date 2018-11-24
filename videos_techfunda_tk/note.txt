@@ -1,0 +1,37 @@
+cd /var/sentora/hostdata/zadmin/public_html/videos_techfunda_tk/
+php app/console cache:clear --env=dev
+chmod -R 755 app/cache/
+
+proftpd
+
+https://www.rosehosting.com/blog/install-sentora-on-centos-7/
+
+update php
+https://gist.github.com/trinvh/faab50615aa73de9979e0dd9f363f346
+
+change httpd conf
+cd /etc/sentora/configs/apache
+
+change in admin/admin configuration/ override settings
+DocumentRoot "/var/sentora/hostdata/zadmin/public_html/videos_techfunda_tk/public_html"
+
+http://videos.ristana.com/api/video/all/0/created/0/8cve98hty47h2uf0dfg4re7fg0wdhn24ffr3er3reg67yu20/16edd7cf-2525-485e-b11a-3dd35f382457/
+
+//test this
+http://videos.techfunda.tk/app_dev.php/login
+There is no suitable CSPRNG installed on your system
+500 Internal Server Error - Exception 
+
+//uncheck enable of open base dir
+
+
+restart apache
+systemctl restart httpd.service
+
+change httpd conf
+cd /etc/sentora/configs/apache
+
+
+//swap
+https://unix.stackexchange.com/questions/294600/i-cant-enable-swap-space-on-centos-7
+https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7

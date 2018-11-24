@@ -339,11 +339,20 @@ public class PlayListFragment extends Fragment implements  SearchView.OnQueryTex
                                 vedio_id = jsonResource.getString("videoId");
 
                             }
-                            String title = jsonSnippet.getString("title");
-                            String description = jsonSnippet.getString("description");
-                            String publishedAt = jsonSnippet.getString("publishedAt");
-                            String thumbnail = jsonSnippet.getJSONObject("thumbnails").getJSONObject(Config.THUMBNAIL_QUALITY).getString("url");
+                            String title = "";
+                            String description = "";
+                            String publishedAt = "";
+                            String thumbnail = "";
 
+                            try{
+                                title = jsonSnippet.getString("title");
+                                description = jsonSnippet.getString("description");
+                                publishedAt = jsonSnippet.getString("publishedAt");
+                                thumbnail = jsonSnippet.getJSONObject("thumbnails").getJSONObject(Config.THUMBNAIL_QUALITY).getString("url");
+
+                            }catch (Exception e){
+                                continue;
+                            }
 
                             publishedAt = publishedAt.substring(0,10);
 

@@ -188,8 +188,8 @@ public class MainActivity extends AppCompatActivity
 
         }else if (id == R.id.nav_fav) {
             viewPager.setCurrentItem(TabModel.tabnameList.size());
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_playlist) {
+            viewPager.setCurrentItem(TabModel.tabnameList.size()-1);
         }else if (id == R.id.nav_manage) {
 
         }else if(id == R.id.nav_disclamer){

@@ -142,8 +142,7 @@ public class VideoFragment extends Fragment {
     private LikeButton like_button_whatsapp_fragement_video;
     private LikeButton like_button_messenger_fragement_video;
     private LikeButton like_button_twitter_fragement_video;
-    private LikeButton like_button_snapshat_fragement_video;
-    private LikeButton like_button_hike_fragement_video;
+
     private LikeButton like_button_fav_fragement_video;
     private LikeButton like_button_copy_fragement_video;
     private LikeButton like_botton_share_fragement_video;
@@ -353,8 +352,10 @@ public class VideoFragment extends Fragment {
         ivHideControllerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                long position = player.getCurrentPosition();
                 Intent intent= new Intent(getActivity(),FullscreenActivity.class);
                 intent.putExtra("video",video);
+                intent.putExtra("position",position);
                 startActivity(intent);
 
             }
@@ -468,8 +469,6 @@ public class VideoFragment extends Fragment {
         this.like_button_whatsapp_fragement_video=(LikeButton) view.findViewById(R.id.like_button_whatsapp_fragement_video);
         this.like_button_messenger_fragement_video=(LikeButton) view.findViewById(R.id.like_button_messenger_fragement_video);
         this.like_button_twitter_fragement_video=(LikeButton) view.findViewById(R.id.like_button_twitter_fragement_video);
-        this.like_button_snapshat_fragement_video=(LikeButton) view.findViewById(R.id.like_button_snapshat_fragement_video);
-        this.like_button_hike_fragement_video=(LikeButton) view.findViewById(R.id.like_button_hike_fragement_video);
 
         this.like_button_fav_fragement_video=(LikeButton) view.findViewById(R.id.like_button_fav_fragement_video);
         this.like_botton_share_fragement_video=(LikeButton) view.findViewById(R.id.like_botton_share_fragement_video);
@@ -884,65 +883,8 @@ public class VideoFragment extends Fragment {
             }
         });
 
-        this.like_button_hike_fragement_video.setOnAnimationEndListener(new OnAnimationEndListener() {
-            @Override
-            public void onAnimationEnd(LikeButton likeButton) {
-                like_button_hike_fragement_video.setLiked(false);
 
 
-
-
-                if (mInterstitialAdDownload.isLoaded()) {
-                    if (check()) {
-                        mInterstitialAdDownload.show();
-                        open_action = 5008;
-                    } else {
-                        if (!downloading) {
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                                new DownloadFileFromURL().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,video, title, extension, 0,HIKE_ID);
-                            else
-                                new DownloadFileFromURL().execute(video, title, extension, 0,HIKE_ID);
-                        }
-                    }
-                }else{
-                    if (!downloading) {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                            new DownloadFileFromURL().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,video, title, extension, 0,HIKE_ID);
-                        else
-                            new DownloadFileFromURL().execute(video, title, extension, 0,HIKE_ID);
-                    }
-                }
-            }
-        });
-        this.like_button_snapshat_fragement_video.setOnAnimationEndListener(new OnAnimationEndListener() {
-            @Override
-            public void onAnimationEnd(LikeButton likeButton) {
-                like_button_snapshat_fragement_video.setLiked(false);
-
-
-
-                if (mInterstitialAdDownload.isLoaded()) {
-                    if (check()) {
-                        mInterstitialAdDownload.show();
-                        open_action = 5009;
-                    } else {
-                        if (!downloading) {
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                                new DownloadFileFromURL().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,video, title, extension, 0,SNAPSHAT_ID);
-                            else
-                                new DownloadFileFromURL().execute(video, title, extension, 0,SNAPSHAT_ID);
-                        }
-                    }
-                }else{
-                    if (!downloading) {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-                            new DownloadFileFromURL().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,video, title, extension, 0,SNAPSHAT_ID);
-                        else
-                            new DownloadFileFromURL().execute(video, title, extension, 0,SNAPSHAT_ID);
-                    }
-                }
-            }
-        });
         this.like_button_fav_fragement_video.setOnLikeListener(new OnLikeListener() {
             @Override
             public void liked(LikeButton likeButton) {

@@ -42,7 +42,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private ImageView ivHideControllerButton;
     private String URL;
-
+    private long pos = 0L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,8 @@ public class FullscreenActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras() ;
         this.URL =  bundle.getString("video");
         setContentView(R.layout.activity_fullscreen);
+
+        pos = bundle.getLong("position");
 
         shouldAutoPlay = true;
         bandwidthMeter = new DefaultBandwidthMeter();
@@ -75,7 +77,7 @@ public class FullscreenActivity extends AppCompatActivity {
         trackSelector = new DefaultTrackSelector(videoTrackSelectionFactory);
 
         player = ExoPlayerFactory.newSimpleInstance(this, trackSelector);
-
+        player.seekTo(pos);
         simpleExoPlayerView.setPlayer(player);
 
         player.setPlayWhenReady(shouldAutoPlay);

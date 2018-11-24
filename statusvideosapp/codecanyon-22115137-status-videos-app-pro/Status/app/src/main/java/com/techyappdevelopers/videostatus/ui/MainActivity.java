@@ -49,6 +49,7 @@ import com.anjlab.android.iab.v3.Constants;
 import com.anjlab.android.iab.v3.TransactionDetails;
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.techyappdevelopers.videostatus.adapter.SelectableViewHolder;
@@ -156,6 +157,8 @@ public class MainActivity extends AppCompatActivity
         initAction();
         firebaseSubscribe();
         initEvent();
+
+        MobileAds.initialize(this,getString(R.string.app_id));
     }
 
     //commented by nirav

@@ -165,82 +165,86 @@
                         android:layout_height="30dp" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
+            <!--android:background="@drawable/border_bottom"-->
             <LinearLayout
                 android:id="@+id/linear_layout_control_image_fragment"
-                android:layout_below="@+id/card_view_fragement_video"
-                android:background="@drawable/border_bottom"
-                android:padding="5dp"
-                android:weightSum="4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="81dp"
+                android:layout_below="@+id/card_view_fragement_video"
+                android:layout_marginLeft="55dp"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="4">
+
                 <RelativeLayout
                     android:id="@+id/ripple_view_wallpaper_fav"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    >
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1">
+
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <com.like.LikeButton
-                            android:layout_marginTop="6dp"
                             android:id="@+id/like_button_fav_fragement_video"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
+                            android:layout_marginTop="6dp"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#aaff00"
                             app:circle_start_color="#0f89a4"
                             app:dots_primary_color="#aaff00"
                             app:dots_secondary_color="#0f89a4"
                             app:icon_size="40dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_favorite_white"
-                            app:unlike_drawable="@drawable/ic_favorite_border_white"
-                            />
+                            app:unlike_drawable="@drawable/ic_favorite_border_white" />
 
                         <TextView
-                            android:textColor="#ffff"
-                            android:text="@string/favorite"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/favorite"
+                            android:textColor="#ffff" />
                     </LinearLayout>
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/ripple_view_wallpaper_download"
-                    android:layout_width="0dp"
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    >
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1">
+
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:background="@drawable/border_left"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:background="@drawable/border_left"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <com.like.LikeButton
-                            android:layout_marginTop="6dp"
                             android:id="@+id/like_button_download_fragement_video"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="50dp"
+                            android:layout_marginTop="6dp"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#aaff00"
                             app:circle_start_color="#0f89a4"
                             app:dots_primary_color="#aaff00"
                             app:dots_secondary_color="#0f89a4"
                             app:icon_size="30dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_download"
-                            app:unlike_drawable="@drawable/ic_download"
-                            />
+                            app:unlike_drawable="@drawable/ic_download" />
 
                         <TextView
-                            android:textColor="#ffff"
-                            android:text="@string/download"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/download"
+                            android:textColor="#ffff" />
                     </LinearLayout>
                 </RelativeLayout>
                 <!-- hide this comment button -->
@@ -248,99 +252,101 @@
                     android:id="@+id/ripple_view_wallpaper_comment"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
+
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:background="@drawable/border_left"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:background="@drawable/border_left"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <RelativeLayout
                             android:id="@+id/relativeLayout_1"
-                            android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
 
                             <com.like.LikeButton
-                                android:layout_marginTop="6dp"
                                 android:id="@+id/like_botton_share_fragement_video"
                                 android:layout_width="match_parent"
                                 android:layout_height="50dp"
+                                android:layout_marginTop="6dp"
+                                app:anim_scale_factor="10"
                                 app:circle_end_color="#aaff00"
                                 app:circle_start_color="#0f89a4"
                                 app:dots_primary_color="#aaff00"
                                 app:dots_secondary_color="#0f89a4"
                                 app:icon_size="30dp"
-                                app:anim_scale_factor="10"
                                 app:like_drawable="@drawable/ic_share_white"
-                                app:unlike_drawable="@drawable/ic_share_white"
-                                />
+                                app:unlike_drawable="@drawable/ic_share_white" />
                         </RelativeLayout>
+
                         <TextView
-                            android:textColor="#ffff"
-                            android:text="@string/share"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/share"
+                            android:textColor="#ffff" />
                     </LinearLayout>
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/ripple_view_wallpaper_comments"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
+
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:background="@drawable/border_left"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:background="@drawable/border_left"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <RelativeLayout
                             android:id="@+id/relativeLayout_4"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:gravity="center">
 
                             <com.like.LikeButton
-                                android:layout_marginTop="6dp"
                                 android:id="@+id/like_botton_comment_activity_gif"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="6dp"
+                                android:visibility="invisible"
+                                app:anim_scale_factor="10"
                                 app:circle_end_color="#aaff00"
                                 app:circle_start_color="#0f89a4"
                                 app:dots_primary_color="#aaff00"
                                 app:dots_secondary_color="#0f89a4"
                                 app:icon_size="30dp"
-                                android:visibility="gone"
-                                app:anim_scale_factor="10"
                                 app:like_drawable="@drawable/ic_comment"
-                                app:unlike_drawable="@drawable/ic_comment"
-                                />
+                                app:unlike_drawable="@drawable/ic_comment" />
+
                             <TextView
-                                android:layout_centerHorizontal="true"
                                 android:id="@+id/text_view_wallpaper_comments_count"
-                                android:background="@drawable/comments_border"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
+                                android:background="@drawable/comments_border"
+                                android:paddingBottom="2dp"
                                 android:paddingLeft="6dp"
                                 android:paddingRight="6dp"
                                 android:paddingTop="2dp"
-                                android:paddingBottom="2dp"
                                 android:text="0"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="11dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:visibility="invisible" />
                         </RelativeLayout>
+
                         <TextView
-                            android:textColor="#ffff"
-                            android:text="@string/comment"
-                            android:visibility="gone"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/comment"
+                            android:textColor="#ffff"
+                            android:visibility="gone" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -363,125 +369,98 @@
                         android:weightSum="7"
                         android:layout_width="match_parent"
                         android:layout_height="60dp">
+
                         <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:id="@+id/like_button_whatsapp_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="10dp"
                             android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_weight="1"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#5CAA4F"
                             app:circle_start_color="#7FD371"
                             app:dots_primary_color="#5CAA4F"
                             app:dots_secondary_color="#7FD371"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             app:icon_size="30dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_whatsapp"
                             app:unlike_drawable="@drawable/ic_whatsapp" />
+
                         <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:id="@+id/like_button_messenger_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="10dp"
                             android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#0656F7"
                             app:circle_start_color="#3AD5F9"
                             app:dots_primary_color="#0656F7"
                             app:dots_secondary_color="#3AD5F9"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             app:icon_size="30dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_messenger"
                             app:unlike_drawable="@drawable/ic_messenger" />
+
                         <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:id="@+id/like_button_facebook_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="10dp"
                             android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#064D93"
                             app:circle_start_color="#5397EA"
                             app:dots_primary_color="#064D93"
                             app:dots_secondary_color="#5397EA"
                             app:icon_size="30dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_facebook"
                             app:unlike_drawable="@drawable/ic_facebook" />
+
                         <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:id="@+id/like_button_instagram_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="10dp"
                             android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#8A3293"
                             app:circle_start_color="#FEA150"
                             app:dots_primary_color="#8A3293"
                             app:dots_secondary_color="#FEA150"
                             app:icon_size="30dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_instagram"
                             app:unlike_drawable="@drawable/ic_instagram" />
+
                         <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:id="@+id/like_button_twitter_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="10dp"
                             android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            app:anim_scale_factor="10"
                             app:circle_end_color="#32c2df"
                             app:circle_start_color="#ffffff"
                             app:dots_primary_color="#32c2df"
                             app:dots_secondary_color="#ffffff"
                             app:icon_size="30dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            app:anim_scale_factor="10"
                             app:like_drawable="@drawable/ic_twitter"
                             app:unlike_drawable="@drawable/ic_twitter" />
-                        <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
-                            android:id="@+id/like_button_snapshat_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="60dp"
-                            app:circle_end_color="#dfcb32"
-                            app:circle_start_color="#ffffff"
-                            app:dots_primary_color="#dfd932"
-                            app:dots_secondary_color="#ffffff"
-                            app:icon_size="30dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            app:anim_scale_factor="10"
-                            app:like_drawable="@drawable/ic_snapchat"
-                            app:unlike_drawable="@drawable/ic_snapchat" />
-                        <com.like.LikeButton
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
-                            android:id="@+id/like_button_hike_fragement_video"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="60dp"
-                            app:circle_end_color="#32c2df"
-                            app:circle_start_color="#ffffff"
-                            app:dots_primary_color="#32c2df"
-                            app:dots_secondary_color="#ffffff"
-                            app:icon_size="30dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            app:anim_scale_factor="10"
-                            app:like_drawable="@drawable/ic_hink"
-                            app:unlike_drawable="@drawable/ic_hink" />
+
+
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

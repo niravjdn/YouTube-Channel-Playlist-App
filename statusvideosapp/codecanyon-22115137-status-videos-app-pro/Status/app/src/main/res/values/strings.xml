@@ -9,8 +9,11 @@
 
 
     <string name="AD_MOB_TIME">15</string>
-    <string name="ad_unit_id_interstitial">ca-app-pub-3447169368463700/4426574296</string>
-    <string name="ad_unit_id_banner">ca-app-pub-3447169368463700/2183554335</string>
+
+    <string name="app_id">ca-app-pub-6580559597285351~8930033574</string>
+    <string name="ad_unit_id_banner">ca-app-pub-6580559597285351/5920726855</string>
+    <string name="ad_unit_id_interstitial">ca-app-pub-6580559597285351/4416073492</string>
+
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -89,7 +92,7 @@
     <string name="policy_privacy_url">http://ristana.com/privacy_policy.html</string>
     <string name="contact_us">Contact us</string>
 
-    <string name="download_more_from_link">Get more from == http://google.com ==</string>
+    <string name="download_more_from_link">Get more videos from == http://bit.do/wpvideostatus ==</string>
     <string name="upload_video">Upload video</string>
     <string name="share_as_image">Share \n as image</string>
     <string name="share_as_text">Share \n as text</string>
@@ -133,6 +136,7 @@
     <string name="no_again">Don’t ask again</string>
     <string name="description_subsribte">With our pack. You can enjoy an ad-free experiance . and focus on the  essential!</string>
     <string name="select_language">Select your Languages</string>
+
     <string name="on_review">On review</string>
 
     <string name="title_slide_1">Welcome to Status And Videos App</string>

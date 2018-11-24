@@ -62,7 +62,8 @@ public class DownloadsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_downloads);
         if(getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(query);
+        getSupportActionBar().setTitle(R.string.downloaded_video);
+
         initView();
         loadImage();
         showAdsBanner();

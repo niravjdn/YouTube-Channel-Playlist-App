@@ -10,6 +10,7 @@ import app.sapnachaudhary2018.fragments.FavouriteFragment;
 import app.sapnachaudhary2018.fragments.PlayListFragment;
 import app.sapnachaudhary2018.fragments.PlayListFragment2;
 import app.sapnachaudhary2018.fragments.PlayListFragmentPublic;
+import app.sapnachaudhary2018.fragments.PlayListSplashFragment;
 import app.sapnachaudhary2018.models.TabModel;
 
 
@@ -36,8 +37,12 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                     Log.d("App: positiontaburl",position+""+tabUrl);
                     PlayListFragment playTab = PlayListFragment.newInstance(tabUrl);
                     return playTab;
-                }else
-                {
+                }else if(TabModel.playlistOrChannelList.get(position).equalsIgnoreCase("playlistSplash")){
+                    String tabUrl = TabModel.idRegardingyoutubeList.get(position);
+                    Log.d("App: positiontaburl",position+""+tabUrl);
+                    PlayListSplashFragment tab = PlayListSplashFragment.newInstance(tabUrl);
+                    return tab;
+                }else{
                     String tabUrl = TabModel.idRegardingyoutubeList.get(position);
                     Log.d("App: positiontaburl",position+""+tabUrl);
                     ChannelFragment channelTab = ChannelFragment.newInstance(tabUrl);

@@ -49,7 +49,7 @@
         <item
             android:id="@+id/nav_disclamer"
             android:icon="@drawable/ic_disclamer"
-            android:title="aviso Legal"
+            android:title="Renuncia"
             android:checkable="false"/>
         <item
             android:id="@+id/nav_gallery"
@@ -57,10 +57,10 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:visible="false"
+            android:id="@+id/nav_playlist"
+            android:visible="true"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Playlist" />
         <item
             android:id="@+id/nav_manage"
             android:visible="false"
@@ -74,29 +74,29 @@
             <item
                 android:id="@+id/nav_more_apps"
                 android:icon="@drawable/ic_more_apps"
-                android:title="Mais aplicativos" />
+                android:title="Más aplicaciones" />
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Compartilhar" />
+                android:title="Compartir" />
 
             <item
                 android:id="@+id/nav_rate"
                 android:icon="@drawable/ic_rate"
-                android:title="Taxa" />
+                android:title="Tarifa" />
 
 
             <item
                 android:id="@+id/nav_contact_developer"
                 android:icon="@drawable/ic_feedback"
-                android:title="Comentários" />
+                android:title="Realimentación" />
 
             <item
                 android:id="@+id/nav_send"
                 android:visible="false"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Enviar" />
 
         </menu>
     </item>

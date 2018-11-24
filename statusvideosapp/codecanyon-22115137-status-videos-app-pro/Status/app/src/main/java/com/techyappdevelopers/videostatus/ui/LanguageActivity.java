@@ -56,6 +56,12 @@ public class LanguageActivity extends AppCompatActivity implements SelectableVie
         loadLang();
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(LanguageActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
