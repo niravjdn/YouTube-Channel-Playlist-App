@@ -7,8 +7,27 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Casa" />
+            android:title="Luccas Neto" />
 
+
+        <item
+            android:id="@+id/nav_playlist"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Playlist" />
+
+        <item
+            android:id="@+id/nav_channel2"
+            android:visible="true"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Felipe Neto" />
+
+
+        <item
+            android:id="@+id/nav_channel3"
+            android:visible="true"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Irmãos Neto " />
 
         <item
             android:id="@+id/nav_fav"
@@ -56,11 +75,7 @@
             android:visible="false"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Gallery" />
-        <item
-            android:id="@+id/nav_playlist"
-            android:visible="true"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Playlist" />
+
         <item
             android:id="@+id/nav_manage"
             android:visible="false"

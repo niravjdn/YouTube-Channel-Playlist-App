@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -38,7 +39,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        setTitle("Luccas Neto");
         packageName = getPackageName();
         pubName = getString(R.string.pubName);
 
@@ -62,6 +65,11 @@ public class MainActivity extends AppCompatActivity
         TabModel.tabnameList.add(m.getTabName());
         TabModel.idRegardingyoutubeList.add(m.getIdRegardingYoutube());
         TabModel.playlistOrChannelList.add(m.getPlayStringOrChannel());*/
+
+       //change here copy list
+        TabModel.tabnameList = TabModel.tabnameList1;
+        TabModel.playlistOrChannelList = TabModel.playlistOrChannelList1;
+        TabModel.idRegardingyoutubeList = TabModel.idRegardingyoutubeList1;
 
        for(int i = 0; i< TabModel.idRegardingyoutubeList.size(); i++){
            Log.d("App: sizeoflist",TabModel.idRegardingyoutubeList.size()+"");
@@ -190,6 +198,15 @@ public class MainActivity extends AppCompatActivity
             viewPager.setCurrentItem(TabModel.tabnameList.size());
         } else if (id == R.id.nav_playlist) {
             viewPager.setCurrentItem(TabModel.tabnameList.size()-1);
+        }else if (id == R.id.nav_channel2) {
+            // Handle the home action
+            Intent i = new Intent(MainActivity.this, Main2Activity.class);
+            startActivity(i);
+            finish();
+        }else if (id == R.id.nav_channel3) {
+            Intent i = new Intent(MainActivity.this, Main3Activity.class);
+            startActivity(i);
+            finish();
         }else if (id == R.id.nav_manage) {
 
         }else if(id == R.id.nav_disclamer){
