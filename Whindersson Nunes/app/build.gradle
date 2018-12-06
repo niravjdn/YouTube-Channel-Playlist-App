@@ -4,10 +4,10 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.techyappdevelopers.whinderson"
+        applicationId "com.techyappdevelopers.whindersonnunnes"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
+        versionCode 3
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -59,4 +59,3 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
-
