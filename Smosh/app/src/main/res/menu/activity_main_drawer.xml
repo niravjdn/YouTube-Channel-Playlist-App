@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Casa" />
+            android:title="Home" />
 
 
         <item
@@ -15,14 +15,14 @@
             android:checkable="false"
             android:visible="true"
             android:icon="@drawable/ic_favourite"
-            android:title="Favorito" />
+            android:title="Favourite" />
 
         <item
             android:id="@+id/nav_natak"
             android:checkable="true"
             android:visible="false"
             android:icon="@drawable/ic_favourite"
-            android:title="Favorito" />
+            android:title="Favourite" />
 
         <item
             android:id="@+id/nav_bhajan"
@@ -68,35 +68,35 @@
             android:title="Change Language" />
     </group>
 
-    <item android:title="Comunicar">
+    <item android:title="Communicate">
         <menu>
 
             <item
                 android:id="@+id/nav_more_apps"
                 android:icon="@drawable/ic_more_apps"
-                android:title="Más aplicaciones" />
+                android:title="More Application" />
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Compartir" />
+                android:title="Share" />
 
             <item
                 android:id="@+id/nav_rate"
                 android:icon="@drawable/ic_rate"
-                android:title="Tarifa" />
+                android:title="Rate" />
 
 
             <item
                 android:id="@+id/nav_contact_developer"
                 android:icon="@drawable/ic_feedback"
-                android:title="Realimentación" />
+                android:title="Feedback" />
 
             <item
                 android:id="@+id/nav_send"
                 android:visible="false"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Enviar" />
+                android:title="Send" />
 
         </menu>
     </item>
