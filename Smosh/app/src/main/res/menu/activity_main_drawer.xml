@@ -49,7 +49,7 @@
         <item
             android:id="@+id/nav_disclamer"
             android:icon="@drawable/ic_disclamer"
-            android:title="Renuncia"
+            android:title="Disclaimer"
             android:checkable="false"/>
         <item
             android:id="@+id/nav_gallery"
