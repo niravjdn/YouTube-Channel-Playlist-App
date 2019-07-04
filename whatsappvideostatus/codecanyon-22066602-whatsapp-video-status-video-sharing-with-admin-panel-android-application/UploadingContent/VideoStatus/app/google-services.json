@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "25957449519",
+    "firebase_url": "https://wp-status-1.firebaseio.com",
+    "project_id": "wp-status-1",
+    "storage_bucket": "wp-status-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25957449519:android:5c73e6ee1aadd304",
+        "android_client_info": {
+          "package_name": "com.techyappdevelopers.wpstatus1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25957449519-u4cvg2s93flr3svko9857g9d5vva53q2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techyappdevelopers.wpstatus1",
+            "certificate_hash": "87b786b2834db78ca73fd52d18fa1171d118531d"
+          }
+        },
+        {
+          "client_id": "25957449519-jp2rv60gtf1r36k5ln7aafapisufr6o4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7iJU2U2Sv-m17W4iT2i5DKQN4kLtiNGs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25957449519-jp2rv60gtf1r36k5ln7aafapisufr6o4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

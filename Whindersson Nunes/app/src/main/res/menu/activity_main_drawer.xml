@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Luccas Neto" />
+
+
+        <item
+            android:id="@+id/nav_playlist"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Playlist" />
+
+        <item
+            android:id="@+id/nav_channel2"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Felipe Neto" />
+
+
+        <item
+            android:id="@+id/nav_channel3"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Irmãos Neto " />
+
+        <item
+            android:id="@+id/nav_fav"
+            android:checkable="false"
+            android:visible="true"
+            android:icon="@drawable/ic_favourite"
+            android:title="Favorito" />
+
+        <item
+            android:id="@+id/nav_natak"
+            android:checkable="true"
+            android:visible="false"
+            android:icon="@drawable/ic_favourite"
+            android:title="Favorito" />
+
+        <item
+            android:id="@+id/nav_bhajan"
+            android:checkable="true"
+            android:visible="false"
+            android:icon="@drawable/ic_bhajan"
+            android:title="Bhajan/Dayro" />
+
+        <item
+            android:id="@+id/nav_garba"
+            android:checkable="true"
+            android:visible="false"
+            android:icon="@drawable/ic_garba"
+            android:title="Garba" />
+
+
+        <item
+            android:id="@+id/nav_speech"
+            android:checkable="true"
+            android:visible="false"
+            android:icon="@drawable/ic_speech"
+            android:title="Motivational Speech" />
+
+        <item
+            android:id="@+id/nav_disclamer"
+            android:icon="@drawable/ic_disclamer"
+            android:title="Renuncia"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+
+        <item
+            android:id="@+id/nav_manage"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Change Language" />
+    </group>
+
+    <item android:title="Comunicar">
+        <menu>
+
+            <item
+                android:id="@+id/nav_more_apps"
+                android:icon="@drawable/ic_more_apps"
+                android:title="Más aplicaciones" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartir" />
+
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_rate"
+                android:title="Tarifa" />
+
+
+            <item
+                android:id="@+id/nav_contact_developer"
+                android:icon="@drawable/ic_feedback"
+                android:title="Realimentación" />
+
+            <item
+                android:id="@+id/nav_send"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Enviar" />
+
+        </menu>
+    </item>
+
+</menu>

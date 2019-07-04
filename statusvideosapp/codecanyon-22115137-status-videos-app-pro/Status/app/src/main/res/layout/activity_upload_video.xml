@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/relative_layout_upload"
+    >
+
+    <RelativeLayout
+        android:background="@color/black"
+        android:layout_above="@+id/linear_layout_save_upload"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/collapsing_toolbar_layout_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false"
+            android:layout_marginBottom="70dp"
+            >
+
+            <VideoView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/video_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:visibility="gone"
+                android:layout_below="@+id/video_view_image"
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/fab_select_image"
+            app:backgroundTint="#f5075b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:tint="@color/white"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_videocam" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout_save_upload"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <android.support.v4.widget.NestedScrollView
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_wallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginRight="60dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/circle_image_view_upload_user"
+                                    android:padding="8dp"
+                                    android:src="@drawable/profile"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp" />
+                                <LinearLayout
+
+                                    android:gravity="center|left"
+                                    android:orientation="vertical"
+                                    android:padding="7dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp">
+                                    <EditText
+                                        android:backgroundTint="@color/white"
+                                        android:id="@+id/edit_text_upload_title"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/light_white"
+                                        android:hint="Video title"
+                                        android:textColorHint="@color/light_white"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <android.support.design.widget.FloatingActionButton
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/fab_save_upload"
+                            app:backgroundTint="#f5075b"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom|end"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_file_upload" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

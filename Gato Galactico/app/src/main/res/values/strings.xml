@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Gato Galactico Videos</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="api">AIzaSyATPcbQ5Ws1gwlXtFAS-LSmCPYUyrPNASk</string>
+
+    <string name="admob_test_interstitial_id">ca-app-pub-6580559597285351/5421713883</string>
+    <string name="admob_test_interstitial_id_backup">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_interstitial_id">ca-app-pub-6580559597285351/5421713883</string>
+
+    <string name="admob_test_banner_id">ca-app-pub-6580559597285351/4461476698</string>
+    <string name="admob_test_banner_id_backup">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_banner_id">ca-app-pub-6580559597285351/4461476698</string>
+
+    <string name="app_ad_id">ca-app-pub-6580559597285351~9277198412</string>
+
+    <string name="testdevice">5D9497F5124978ACC4D288B37EE6E9DD</string>
+    <string name="applink">https://www.google.com</string>
+
+    <string name="splashnameenglish">Sagar Patel Video Songs</string>
+    <string name="splashnamehindi">સાગર પટેલ વિડિઓ ગીતો</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_close">Exit</string>
+    <string name="action_search">Search...</string>
+
+    <string name="developer_email">techyappdevelopers@gmail.com</string>
+    <string name="pubName">Techy App Developers</string>
+
+</resources>
